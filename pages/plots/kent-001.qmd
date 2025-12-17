@@ -1,0 +1,18 @@
+---
+title: "Occupant satisfaction and thermal preference"
+description: "Plot comparing thermal satisfaction and thermal preference at different conditions."
+categories: ["Survey data", "Snapshot"]
+source: "@kentEnergySavingsThermal2023"
+source-doi: "https://doi.org/10.1016/j.buildenv.2023.110674"
+code-r: None
+code-python: None
+code-contributor: None
+---
+
+![](kent-001.png){.preview-image}
+
+
+::: {.callout-note}
+**Source:** {{< meta source >}} <br>
+**DOI**: [{{< meta source-doi >}}]({{< meta source-doi >}}) <br>
+:::

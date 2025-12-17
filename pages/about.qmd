@@ -1,0 +1,8 @@
+---
+title: "About"
+title-block: true
+image: /../assets/img/cbe-favicon.png
+image-width: 200px
+about:
+  template: jolla
+---

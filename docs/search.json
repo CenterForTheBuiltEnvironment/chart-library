@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "pages/plots/sat-plot.html",
+    "href": "pages/plots/sat-plot.html",
+    "title": "Occupant satisfaction with IEQ parameters",
+    "section": "",
+    "text": "(Here you later put the full explanation, R/Python code chunks, etc.)\n\n\n\n\n\n\nNote\n\n\n\nSource: Parkinson et al. (2023)  DOI: https://doi.org/10.5334/bc.274 \nCode: View R code of similar plot on GitHub · Added by T. Kramer"
+  },
+  {
+    "objectID": "pages/plots/tsv.html",
+    "href": "pages/plots/tsv.html",
+    "title": "Thermal sensation",
+    "section": "",
+    "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_sensation_d &lt;- stacked_pct_data(survey, thermal_sensation)\n\nplot_stacked_pct(survey, thermal_sensation, thermal_sensation_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
+  },
+  {
+    "objectID": "pages/plots/ko-001.html",
+    "href": "pages/plots/ko-001.html",
+    "title": "Temporal autonomy for IEQ parameters",
+    "section": "",
+    "text": "Note\n\n\n\nSource: Ko et al. (2018)  DOI: https://doi.org/10.1016/j.buildenv.2018.08.038"
+  },
+  {
+    "objectID": "pages/plots/kent-002.html",
+    "href": "pages/plots/kent-002.html",
+    "title": "Occupant satisfaction with building by category",
+    "section": "",
+    "text": "Note\n\n\n\nSource: Kent et al. (2024)  DOI: https://doi.org/10.1038/s41598-024-65768-w"
+  },
+  {
+    "objectID": "pages/code/r.html",
+    "href": "pages/code/r.html",
+    "title": "Plotting in R",
+    "section": "",
+    "text": "This section focuses on R-based visualizations for building science and indoor environmental quality data.\nThe examples in this library will mostly use:"
+  },
+  {
+    "objectID": "pages/code/r.html#core-ideas",
+    "href": "pages/code/r.html#core-ideas",
+    "title": "Plotting in R",
+    "section": "Core ideas",
+    "text": "Core ideas\n\n1. Data as data frames\nMost R plotting in this library assumes:\n\nyour data is in a data frame or tibble\none row = one observation\none column = one variable\n\nIf your data is not in this shape, reshaping is usually the first step using functions such as:\n\npivot_longer() and pivot_wider() (tidyr)\nmutate(), filter(), group_by(), summarise() (dplyr)\n\nWell-structured data makes plotting simpler and more predictable.\n\n\n\n2. Grammar of Graphics mindset\nggplot2 follows a “grammar of graphics” approach where:\n\ndata provides values\naesthetics map variables to visual properties\ngeoms define how data is drawn (points, lines, bars, etc.)\nscales control how data maps to visual values\nfacets create small multiples\nthemes control appearance\n\nMost plots follow a structure like:\nggplot(data, aes(x = &lt;var&gt;, y = &lt;var&gt;, color = &lt;group&gt;)) +\n  geom_&lt;something&gt;() +\n  theme_&lt;something&gt;() +\n  labs(x = \"X label\", y = \"Y label\", title = \"Title\")\nThis makes plots systematic, testable, and easy to refine.\n\n\n\n3. Factor ordering matters\nFor categorical variables (e.g. survey responses, building IDs, Likert scales):\n\nset factor levels explicitly\nnever rely on default alphabetical ordering\n\nExample:\ndf$response &lt;- factor(\n  df$response,\n  levels = c(\"Cold\", \"Cool\", \"Neutral\", \"Warm\", \"Hot\")\n)\nThis avoids confusing axis and legend orderings.\n\n\n\n4. Themes and consistency\nVisual consistency matters as much as correctness.\nYou should aim for:\n\na consistent font family and size\nrestrained use of color\nminimal distractions (no unnecessary gridlines)\nconsistent sizing across figures\n\nFor now, theme_minimal() or theme_classic() are good defaults. Later, a custom lab theme can be added and reused everywhere.\n\n\n\n5. Exporting figures\nExport figures with explicit size and resolution:\nggsave(\n  \"figures/example_plot.pdf\",\n  width = 8,\n  height = 5,\n  units = \"in\",\n  dpi = 300\n)\nRecommendations:\n\nuse vector formats (PDF, SVG) for publications\nembed intent into filenames\nkeep figures in a dedicated folder\n\n\n\n\n6. Reproducibility principles\nPlots should be:\n\ngenerated from code, not GUIs\nfully reproducible from raw data\nstyled using functions, not copy-paste\n\nAim to write small helper functions such as:\n\ntheme_lab()\nscale_color_lab()\nscale_fill_lab()\n\nand reuse them across projects."
+  },
+  {
+    "objectID": "pages/code/r.html#where-this-r-section-is-going",
+    "href": "pages/code/r.html#where-this-r-section-is-going",
+    "title": "Plotting in R",
+    "section": "Where this R section is going",
+    "text": "Where this R section is going\nThis space will grow to include:\n\nreusable plotting patterns\nhelper functions\ncommon domain patterns\nreferences and recommended reading\n\nThe goal is a growing knowledge base, not just a gallery."
+  },
+  {
+    "objectID": "pages/code/python.html",
+    "href": "pages/code/python.html",
+    "title": "Plotting in Python",
+    "section": "",
+    "text": "This section focuses on Python-based visualizations for building science and indoor environmental quality data.\nThe examples in this library will mainly use:"
+  },
+  {
+    "objectID": "pages/code/python.html#core-ideas",
+    "href": "pages/code/python.html#core-ideas",
+    "title": "Plotting in Python",
+    "section": "Core ideas",
+    "text": "Core ideas\n\n1. Data as DataFrames\nMost examples assume:\n\none row = one observation\none column = one variable\ndata stored as pandas DataFrames\n\nCommon preprocessing tasks before plotting:\n\ncleaning and filtering\naggregation with groupby\nreshaping via melt() and pivot()\n\nClear data structure simplifies plotting code.\n\n\n\n2. matplotlib as the foundation\nThere are two main ways to use matplotlib:\n\nStateful style (quick)\nimport matplotlib.pyplot as plt\n\nplt.plot(x, y)\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.title(\"Example\")\nplt.show()\n\n\nObject-oriented style (recommended)\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\nax.plot(x, y)\nax.set_xlabel(\"x\")\nax.set_ylabel(\"y\")\nax.set_title(\"Example\")\nfig.tight_layout()\nThe object-oriented interface is more flexible and easier to reuse in real projects.\n\n\n\n\n3. seaborn as a helper layer\nseaborn simplifies many plot types:\n\ndistributions\nregression plots\ncategorical comparisons\n\nExample:\nimport seaborn as sns\n\nsns.scatterplot(data=df, x=\"temp\", y=\"comfort\", hue=\"building\")\nseaborn uses matplotlib internally and can be customized the same way.\n\n\n\n4. Styling and consistency\nIn matplotlib, visual defaults can be controlled globally:\nimport matplotlib as mpl\n\nmpl.rcParams[\"figure.figsize\"] = (8, 5)\nmpl.rcParams[\"font.size\"] = 11\nLater, a centralized style file (e.g. lab_style.mplstyle) can be created and reused.\n\n\n\n5. Exporting figures\nAlways specify output format and quality:\nfig.savefig(\n    \"figures/example_plot.pdf\",\n    bbox_inches=\"tight\",\n    dpi=300\n)\nGuidelines:\n\nuse PDF/SVG for vector output\ncontrol figure size explicitly\nseparate source code from output figures\n\n\n\n\n6. Reproducibility principles\nGood practice includes:\n\nversion control (Git)\nscripts or notebooks that run top-to-bottom\nfunctions for repeated patterns\navoidance of manual tweaks\n\nReusable helpers (e.g. plot helpers, style functions) lead to cleaner code and consistent figures."
+  },
+  {
+    "objectID": "pages/code/python.html#where-this-python-section-is-going",
+    "href": "pages/code/python.html#where-this-python-section-is-going",
+    "title": "Plotting in Python",
+    "section": "Where this Python section is going",
+    "text": "Where this Python section is going\nFuture additions may include:\n\nreusable plotting utilities\nstandardized styling helpers\nPython/R side-by-side examples\ncurated references and learning resources\n\nThe aim is to turn this into a living reference, not just static examples."
+  },
+  {
+    "objectID": "pages/resources/index.html",
+    "href": "pages/resources/index.html",
+    "title": "Resources",
+    "section": "",
+    "text": "This page collects useful resources for data visualization and plotting in the context of building science and indoor environmental quality.\nThe goal is to provide a starting point for:\nOver time, this page can be updated with lab-specific recommendations and notes."
+  },
+  {
+    "objectID": "pages/resources/index.html#reading",
+    "href": "pages/resources/index.html#reading",
+    "title": "Resources",
+    "section": "Reading",
+    "text": "Reading\n\nGeneral data visualization\nThese books focus on visualization principles rather than specific tools:\n\nThe Visual Display of Quantitative Information – Edward Tufte\nhttps://www.edwardtufte.com/tufte/books_vdqi\nEnvisioning Information – Edward Tufte\nhttps://www.edwardtufte.com/tufte/books_ei\nData Visualization: A Practical Introduction – Kieran Healy\nhttps://socviz.co/\nFundamentals of Data Visualization – Claus O. Wilke\nhttps://clauswilke.com/dataviz/\nStorytelling with Data – Cole Nussbaumer Knaflic\nhttps://www.storytellingwithdata.com/books\n\n\n\n\nR and ggplot2\nResources for R visualization:\n\nR for Data Science – Wickham & Grolemund\nhttps://r4ds.had.co.nz/\nggplot2: Elegant Graphics for Data Analysis – Hadley Wickham\nhttps://ggplot2-book.org/\nR Graphics Cookbook – Winston Chang\nhttps://r-graphics.org/\nThe official ggplot2 documentation\nhttps://ggplot2.tidyverse.org/\n\n\n\n\nPython visualization\nResources for Python plotting:\n\nPython Data Science Handbook – Jake VanderPlas\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nPython for Data Analysis – Wes McKinney\nhttps://wesmckinney.com/book/\nMatplotlib official documentation\nhttps://matplotlib.org/stable/index.html\nMatplotlib tutorials\nhttps://matplotlib.org/stable/tutorials/index.html\nSeaborn documentation\nhttps://seaborn.pydata.org/"
+  },
+  {
+    "objectID": "pages/resources/index.html#packages",
+    "href": "pages/resources/index.html#packages",
+    "title": "Resources",
+    "section": "Packages",
+    "text": "Packages\n\nR\nCore R plotting ecosystem:\n\nggplot2 https://ggplot2.tidyverse.org/\npatchwork https://patchwork.data-imaginist.com/\ncowplot https://wilkelab.org/cowplot/\nviridis https://sjmgarnier.github.io/viridis/\n\n\n\n\nPython\nCore Python plotting ecosystem:\n\nmatplotlib\nhttps://matplotlib.org/\npandas\nhttps://pandas.pydata.org/\nseaborn\nhttps://seaborn.pydata.org/\nplotly\nhttps://plotly.com/python/\ngeopandas\nhttps://geopandas.org/\ncartopy\nhttps://scitools.org.uk/cartopy/docs/latest/\nxarray (time series & gridded data)\nhttps://docs.xarray.dev/en/stable/"
+  },
+  {
+    "objectID": "pages/resources/index.html#other-useful-resources",
+    "href": "pages/resources/index.html#other-useful-resources",
+    "title": "Resources",
+    "section": "Other useful resources",
+    "text": "Other useful resources\n\nReproducible research & publishing\n\nQuarto documentation\nhttps://quarto.org/\nR Markdown\nhttps://rmarkdown.rstudio.com/\nJupyter Notebook documentation\nhttps://jupyter.org/documentation\n\n\n\n\nColor and accessibility\n\nColorBrewer palettes\nhttps://colorbrewer2.org/\nAccessible color palettes\nhttps://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\n\n\n\n\nInspiration & galleries\n\nFlowingData\nhttps://flowingdata.com/\nFrom Data to Viz\nhttps://www.data-to-viz.com/\nObservable notebooks\nhttps://observablehq.com/"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gallery",
+    "section": "",
+    "text": "Occupant satisfaction and thermal preference\n\n\nPlot comparing thermal satisfaction and thermal preference at different conditions.\n\n\n\n\n\n\n\n\n\n\nOccupant satisfaction with IEQ parameters\n\n\nStandard CBE plot to visualize satisfaction with IEQ parameters.\n\n\n\n\n\n\n\n\n\n\nOccupant satisfaction with building by category\n\n\nPlot comparing thermal satisfaction in different building categories.\n\n\n\n\n\n\n\n\n\n\nTemporal autonomy for IEQ parameters\n\n\nHourly autonomy map and annual summary for luminous autonomy, thermal autonomy, and ventilation autonomy.\n\n\n\n\n\n\n\n\n\n\nThermal acceptability\n\n\nDistribution of thermal acceptability votes, e.g from survey data.\n\n\n\n\n\n\n\n\n\n\nThermal preference\n\n\nDistribution of thermal preference votes, e.g from survey data.\n\n\n\n\n\n\n\n\n\n\nThermal sensation\n\n\nDistribution of thermal sensation votes, e.g from survey data.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "pages/code/ai.html",
+    "href": "pages/code/ai.html",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "",
+    "text": "This page provides guidance on how to use AI tools (such as ChatGPT and coding assistants) responsibly and effectively when developing figures, analyzing data, and writing code.\nAI is treated here as a support tool, not a replacement for scientific judgment or statistical reasoning."
+  },
+  {
+    "objectID": "pages/code/ai.html#what-ai-is-good-at",
+    "href": "pages/code/ai.html#what-ai-is-good-at",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "What AI is good at",
+    "text": "What AI is good at\nAI tools are particularly useful for:\n\nCode assistance\n\ngenerating boilerplate Python/R code\nexplaining unfamiliar functions or syntax\nconverting logic between languages (e.g., R ↔︎ Python)\nwriting helper functions\ndebugging simple errors\n\n\n\nVisualization prototyping\n\ngenerating first drafts of plots\nsuggesting plot types for a dataset\ntranslating conceptual ideas into code\nexploring alternative encodings (e.g., color vs shape vs faceting)\n\n\n\nDocumentation and writing\n\ndrafting README files or documentation pages\nimproving clarity of plot explanations\nsummarizing code behavior\ngenerating examples and templates"
+  },
+  {
+    "objectID": "pages/code/ai.html#what-ai-is-not-good-at",
+    "href": "pages/code/ai.html#what-ai-is-not-good-at",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "What AI is not good at",
+    "text": "What AI is not good at\nAI should not be trusted blindly for:\n\nStatistical correctness\n\nmodel selection\ninterpreting results\nvalidating assumptions\nerror analysis\n\nAlways verify statistical reasoning independently.\n\n\nScientific interpretation\nAI does not understand your domain.\nIt cannot judge whether a result is scientifically meaningful.\n\n\nData privacy and ethics\nDo not upload:\n\nconfidential data\npersonally identifiable information\nunpublished results\nsensitive datasets\n\nWhen in doubt, assume the data should not be shared."
+  },
+  {
+    "objectID": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
+    "href": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Good workflow: how to integrate AI into plotting",
+    "text": "Good workflow: how to integrate AI into plotting\nA recommended workflow:\n\nYou define the question.\nYou clean and structure the data.\nYou ask AI for plotting ideas or code templates.\nYou review and adapt the code.\nYou validate the output visually and statistically.\nYou refine styling and labeling manually.\nYou document the final reasoning in your own words.\n\nAI is a drafting assistant, not an author."
+  },
+  {
+    "objectID": "pages/code/ai.html#asking-better-questions",
+    "href": "pages/code/ai.html#asking-better-questions",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Asking better questions",
+    "text": "Asking better questions\nAI works best when you provide:\n\na small reproducible example\na clear description of the outcome you want\ncontext about your dataset\nconstraints (e.g., publication quality, grayscale safe, accessible colors)\n\nExample:\n\n“I have a dataframe with time, temperature, and TSV.\nI want a plot that shows trend and uncertainty bands, in a style suitable for a journal paper.\nI am using Python/matplotlib.”\n\nPoor prompts are vague; good prompts are specific."
+  },
+  {
+    "objectID": "pages/code/ai.html#validation-checklist",
+    "href": "pages/code/ai.html#validation-checklist",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Validation checklist",
+    "text": "Validation checklist\nBefore trusting AI-generated code or plots:\n\nDoes the chart type match my data?\nAre axes correctly labeled and scaled?\nAre units correct?\nAre categories ordered meaningfully?\nAre colors accessible?\nDoes the code reproduce the same figure on rerun?\nDo I understand what every major line of code does?\n\nIf the answer is “no” to any of these, treat the output as a draft, not final work."
+  },
+  {
+    "objectID": "pages/code/ai.html#transparency-and-acknowledgment",
+    "href": "pages/code/ai.html#transparency-and-acknowledgment",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Transparency and acknowledgment",
+    "text": "Transparency and acknowledgment\nIf AI tools made a substantial contribution to:\n\ncode generation\nwriting\nfigure design\n\nconsider:\n\ndocumenting this in internal project notes\nacknowledging AI assistance when appropriate (e.g., teaching material, tutorials)\n\nDo not list AI as an author of scientific work."
+  },
+  {
+    "objectID": "pages/code/ai.html#how-this-page-will-evolve",
+    "href": "pages/code/ai.html#how-this-page-will-evolve",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "How this page will evolve",
+    "text": "How this page will evolve\nOver time, this page may include:\n\nexamples of good prompts\ncase studies\nAI-assisted figure walkthroughs\nlab policies on AI use\nreproducibility guidelines\n\nTreat AI as a powerful tool that improves productivity — not as a substitute for expertise."
+  },
+  {
+    "objectID": "pages/styling/index.html",
+    "href": "pages/styling/index.html",
+    "title": "Styling Guidelines",
+    "section": "",
+    "text": "Styling Guidelines\nInternally, we define default visual standards for plots and figures. The main goals are:\n\nclarity – figures should be easy to interpret\nconsistency – plots should look coherent across projects\nreproducibility – formatting choices should be deliberate and documented\npublication-readiness – figures should scale cleanly from reports to journal submissions\n\nThese recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.\n\n\nGeneral plotting guidelines\n\nUse a sans-serif font type.  Fonts like Arial or Helvetica are easier to read and are usually the font of choice for labels and annotations.\nUse standard journal column widths.  When preparing figures for scientific publications using standard widths (e.g. single or double column) is critical to make decisions on font size and aspect ratio.\n\nSingle-column: 89 mm\nTwo-column: 183 mm\n\nUse an appropriate font size.  Everything smaller than 7pt this is usually too small for axis labels, tick labels, and legend text.\nUse a neutral background.  Usually a white or transparent background is best when exporting PNGs (e.g., for slides).\nAvoid using borders and frames.  Unless they are needed for clarity.\nUse 4–6 tick labels or less.  More ticks reduce clarity and add unnecessary detail.\nUse detailed captions.  The figure and caption should be understandable without referring back to the main text.\n\n\n\n\n\n\n\nImportantThings to avoid\n\n\n\n\nAvoid pie charts.\nBar charts usually communicate the same information more clearly and comparably.\nAvoid 3D charts.\nWhen rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.\nAvoid gridlines by default.\nGridlines were historically used to assist manual interpretation.\nIn modern workflows, it is better to:\n\nshare the underlying dataset, and\n\nadd gridlines only if they improve interpretability."
+  },
+  {
+    "objectID": "pages/styling/color-palettes.html",
+    "href": "pages/styling/color-palettes.html",
+    "title": "CBE Chart Library",
+    "section": "",
+    "text": "Occupant satisfaction\n\n\n\n\n\n\n\n\n\n\n\nCode\nsatisfaction_levels &lt;- c(\"-3\", \"-2\", \"-1\", \"0\", \"+1\", \"+2\", \"+3\")\nsatisfaction_labels &lt;- c(\"Very\\nDissatisfied\", \"Dissatisfied\", \"Somewhat\\nDissatisfied\", \"Neither\",  \"Somewhat\\nSatisfied\", \"Satisfied\", \"Very\\nSatisfied\")\nsatisfaction_palette &lt;- c(\"#ba3b50\", \"#cf6b61\", \"#d09da9\", '#f3e8e7', \"#c2e8bb\", \"#8bcc8a\", \"#4cb15e\")\n\n\n\n\n\nThermal sensation\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_sensation_levels &lt;- c(\"-3\", \"-2\", \"-1\", \"0\", \"+1\", \"+2\", \"+3\")\nthermal_sensation_labels &lt;- c(\"Cold\", \"Cool\", \"Slightly cool\", \"Neutral\", \"Slightly warm\", \"Warm\", \"Hot\")\nthermal_sensation_palette &lt;- c(\"#6b8dd6\",\"#82c6ed\",\"#b8e4f7\",\"#c9e0b0\",\"#f7a9b7\",\"#eb6b58\",\"#b44a4a\")\n\n\n\n\n\nThermal preference\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_preference_levels &lt;- c(\"-1\", \"0\", \"+1\")\nthermal_preference_labels &lt;- c(\"Cooler\", \"No change\", \"Warmer\")\nthermal_preference_palette &lt;- c(\"#82c6ed\",\"#c9e0b0\",\"#eb6b58\")\n\n\n\n\n\nThermal acceptability\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_acceptability_levels &lt;- c(\"-2\", \"-1\", \"0\", \"+1\", \"+2\")\nthermal_acceptability_labels &lt;- c(\"Very unacceptable\", \"Somewhat unacceptable\", \"Neither nor\", \"Somewhat acceptable\", \"Very acceptable\")\nthermal_acceptability_palette &lt;- c('#bc3e4d','#d99fa8','#f3e8e7','#c1e0b9','#38a257')"
+  },
+  {
+    "objectID": "pages/plots/tav.html",
+    "href": "pages/plots/tav.html",
+    "title": "Thermal acceptability",
+    "section": "",
+    "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_acceptability_d &lt;- stacked_pct_data(survey, thermal_acceptability)\n\nplot_stacked_pct(survey, thermal_acceptability, acceptability_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
+  },
+  {
+    "objectID": "pages/plots/kent-001.html",
+    "href": "pages/plots/kent-001.html",
+    "title": "Occupant satisfaction and thermal preference",
+    "section": "",
+    "text": "Note\n\n\n\nSource: Kent et al. (2023)  DOI: https://doi.org/10.1016/j.buildenv.2023.110674"
+  },
+  {
+    "objectID": "pages/plots/tpv.html",
+    "href": "pages/plots/tpv.html",
+    "title": "Thermal preference",
+    "section": "",
+    "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_preference_d &lt;- stacked_pct_data(survey, thermal_preference)\n\nplot_stacked_pct(survey, thermal_preference, thermal_preference_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
+  }
+]

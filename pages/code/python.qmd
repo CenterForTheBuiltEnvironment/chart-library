@@ -1,0 +1,146 @@
+---
+title: "Plotting in Python"
+---
+
+This section focuses on **Python-based visualizations** for building science and indoor environmental quality data.
+
+The examples in this library will mainly use:
+
+- `matplotlib` as the core plotting engine
+- `pandas` for data handling
+- `seaborn` for high-level statistical plots where helpful
+- `plotly` for interactive plots that are handy for web apps
+
+---
+
+## Core ideas
+
+### 1. Data as DataFrames
+
+Most examples assume:
+
+- one row = one observation
+- one column = one variable
+- data stored as pandas DataFrames
+
+Common preprocessing tasks before plotting:
+
+- cleaning and filtering
+- aggregation with groupby
+- reshaping via melt() and pivot()
+
+Clear data structure simplifies plotting code.
+
+---
+
+### 2. matplotlib as the foundation
+
+There are two main ways to use matplotlib:
+
+#### Stateful style (quick)
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(x, y)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Example")
+plt.show()
+```
+
+#### Object-oriented style (recommended)
+
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_title("Example")
+fig.tight_layout()
+```
+
+The object-oriented interface is more flexible and easier to reuse in real projects.
+
+---
+
+### 3. seaborn as a helper layer
+
+`seaborn` simplifies many plot types:
+
+- distributions
+- regression plots
+- categorical comparisons
+
+Example:
+
+```python
+import seaborn as sns
+
+sns.scatterplot(data=df, x="temp", y="comfort", hue="building")
+```
+
+`seaborn` uses `matplotlib` internally and can be customized the same way.
+
+---
+
+### 4. Styling and consistency
+
+In `matplotlib`, visual defaults can be controlled globally:
+
+```python
+import matplotlib as mpl
+
+mpl.rcParams["figure.figsize"] = (8, 5)
+mpl.rcParams["font.size"] = 11
+```
+
+Later, a centralized style file (e.g. lab_style.mplstyle) can be created and reused.
+
+---
+
+### 5. Exporting figures
+
+Always specify output format and quality:
+
+```python
+fig.savefig(
+    "figures/example_plot.pdf",
+    bbox_inches="tight",
+    dpi=300
+)
+```
+
+Guidelines:
+
+- use PDF/SVG for vector output
+- control figure size explicitly
+- separate source code from output figures
+
+---
+
+### 6. Reproducibility principles
+
+Good practice includes:
+
+- version control (Git)
+- scripts or notebooks that run top-to-bottom
+- functions for repeated patterns
+- avoidance of manual tweaks
+
+Reusable helpers (e.g. plot helpers, style functions) lead to cleaner code and consistent figures.
+
+---
+
+## Where this Python section is going
+
+Future additions may include:
+
+- reusable plotting utilities
+- standardized styling helpers
+- Python/R side-by-side examples
+- curated references and learning resources
+
+The aim is to turn this into a living reference, not just static examples.

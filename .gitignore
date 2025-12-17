@@ -1,0 +1,15 @@
+/.quarto/
+**/*.quarto_ipynb
+
+_site/
+
+
+# MacOS
+.DS_Store
+
+
+# RStudio
+.Rproj.user
+.Rprofile
+.Rhistory
+renv/

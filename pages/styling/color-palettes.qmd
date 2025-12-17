@@ -1,0 +1,153 @@
+
+
+```{r setup}
+#| echo: false
+#| warning: false
+
+source(here::here("src", "R", "x_func.R"))
+
+library(ggplot2)
+```
+
+
+### Occupant satisfaction
+
+```{r satisfaction}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 1.25
+#| fig-align: center
+#| fig-dpi: 500
+
+satisfaction_levels <- c("-3", "-2", "-1", "0", "+1", "+2", "+3")
+satisfaction_labels <- c("Very\nDissatisfied", "Dissatisfied", "Somewhat\nDissatisfied", "Neither",  "Somewhat\nSatisfied", "Satisfied", "Very\nSatisfied")
+satisfaction_palette <- c("#ba3b50", "#cf6b61", "#d09da9", '#f3e8e7', "#c2e8bb", "#8bcc8a", "#4cb15e")
+
+df <- data.frame(
+  level = factor(satisfaction_levels, levels = satisfaction_levels),
+  label = satisfaction_labels,
+  color = satisfaction_palette,
+  x = seq_along(satisfaction_levels),
+  y = 1
+)
+
+palette_strip_plot(df)
+
+```
+
+```{r}
+#| code-fold: true
+
+satisfaction_levels <- c("-3", "-2", "-1", "0", "+1", "+2", "+3")
+satisfaction_labels <- c("Very\nDissatisfied", "Dissatisfied", "Somewhat\nDissatisfied", "Neither",  "Somewhat\nSatisfied", "Satisfied", "Very\nSatisfied")
+satisfaction_palette <- c("#ba3b50", "#cf6b61", "#d09da9", '#f3e8e7', "#c2e8bb", "#8bcc8a", "#4cb15e")
+
+```
+---
+
+
+### Thermal sensation
+
+```{r thermal_sensation}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 1.25
+#| fig-align: center
+#| fig-dpi: 500
+
+thermal_sensation_levels <- c("-3", "-2", "-1", "0", "+1", "+2", "+3")
+thermal_sensation_labels <- c("Cold", "Cool", "Slightly cool", "Neutral", "Slightly warm", "Warm", "Hot")
+thermal_sensation_palette <- c("#6b8dd6", "#82c6ed","#b8e4f7","#c9e0b0","#f7a9b7","#eb6b58","#b44a4a")
+
+df <- data.frame(
+  level = factor(thermal_sensation_levels, levels = thermal_sensation_levels),
+  label = thermal_sensation_labels,
+  color = thermal_sensation_palette,
+  x = seq_along(thermal_sensation_levels),
+  y = 1
+)
+
+palette_strip_plot(df)
+
+```
+
+```{r}
+#| code-fold: true
+
+thermal_sensation_levels <- c("-3", "-2", "-1", "0", "+1", "+2", "+3")
+thermal_sensation_labels <- c("Cold", "Cool", "Slightly cool", "Neutral", "Slightly warm", "Warm", "Hot")
+thermal_sensation_palette <- c("#6b8dd6","#82c6ed","#b8e4f7","#c9e0b0","#f7a9b7","#eb6b58","#b44a4a")
+
+```
+---
+
+
+### Thermal preference
+
+```{r thermal_preference}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 1.25
+#| fig-align: center
+#| fig-dpi: 500
+
+thermal_preference_levels <- c("-1", "0", "+1")
+thermal_preference_labels <- c("Cooler", "No change", "Warmer")
+thermal_preference_palette <- c("#82c6ed","#c9e0b0","#eb6b58")
+
+df <- data.frame(
+  level = factor(thermal_preference_levels, levels = thermal_preference_levels),
+  label = thermal_preference_labels,
+  color = thermal_preference_palette,
+  x = seq_along(thermal_preference_levels),
+  y = 1
+)
+
+palette_strip_plot(df)
+
+```
+
+```{r}
+#| code-fold: true
+
+thermal_preference_levels <- c("-1", "0", "+1")
+thermal_preference_labels <- c("Cooler", "No change", "Warmer")
+thermal_preference_palette <- c("#82c6ed","#c9e0b0","#eb6b58")
+
+```
+---
+
+
+### Thermal acceptability
+
+```{r thermal_acceptability}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 1.25
+#| fig-align: center
+#| fig-dpi: 500
+
+thermal_acceptability_levels <- c("-2", "-1", "0", "+1", "+2")
+thermal_acceptability_labels <- c("Very unacceptable", "Somewhat unacceptable", "Neither nor", "Somewhat acceptable", "Very acceptable")
+thermal_acceptability_palette <- c('#bc3e4d','#d99fa8','#f3e8e7','#c1e0b9','#38a257')
+
+df <- data.frame(
+  level = factor(thermal_acceptability_levels, levels = thermal_acceptability_levels),
+  label = thermal_acceptability_labels,
+  color = thermal_acceptability_palette,
+  x = seq_along(thermal_acceptability_levels),
+  y = 1
+)
+
+palette_strip_plot(df)
+
+```
+
+```{r}
+#| code-fold: true
+
+thermal_acceptability_levels <- c("-2", "-1", "0", "+1", "+2")
+thermal_acceptability_labels <- c("Very unacceptable", "Somewhat unacceptable", "Neither nor", "Somewhat acceptable", "Very acceptable")
+thermal_acceptability_palette <- c('#bc3e4d','#d99fa8','#f3e8e7','#c1e0b9','#38a257')
+
+```

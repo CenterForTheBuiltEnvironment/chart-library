@@ -1,0 +1,142 @@
+---
+title: "Plotting in R"
+---
+
+This section focuses on **R-based visualizations** for building science and indoor environmental quality data.
+
+The examples in this library will mostly use:
+
+- Base R plotting functions for quick diagnostics
+- `ggplot2` for publication-quality visualizations
+- The `tidyverse` for data manipulation
+
+---
+
+## Core ideas
+
+### 1. Data as data frames
+
+Most R plotting in this library assumes:
+
+- your data is in a data frame or tibble
+- one row = one observation
+- one column = one variable
+
+If your data is not in this shape, reshaping is usually the first step using functions such as:
+
+- pivot_longer() and pivot_wider() (tidyr)
+- mutate(), filter(), group_by(), summarise() (dplyr)
+
+Well-structured data makes plotting simpler and more predictable.
+
+---
+
+### 2. Grammar of Graphics mindset
+
+ggplot2 follows a “grammar of graphics” approach where:
+
+- data provides values
+- aesthetics map variables to visual properties
+- geoms define how data is drawn (points, lines, bars, etc.)
+- scales control how data maps to visual values
+- facets create small multiples
+- themes control appearance
+
+Most plots follow a structure like:
+
+```r
+ggplot(data, aes(x = <var>, y = <var>, color = <group>)) +
+  geom_<something>() +
+  theme_<something>() +
+  labs(x = "X label", y = "Y label", title = "Title")
+```
+
+This makes plots systematic, testable, and easy to refine.
+
+---
+
+### 3. Factor ordering matters
+
+For categorical variables (e.g. survey responses, building IDs, Likert scales):
+
+- set factor levels explicitly
+- never rely on default alphabetical ordering
+
+Example:
+
+```r
+df$response <- factor(
+  df$response,
+  levels = c("Cold", "Cool", "Neutral", "Warm", "Hot")
+)
+```
+
+This avoids confusing axis and legend orderings.
+
+---
+
+### 4. Themes and consistency
+
+Visual consistency matters as much as correctness.
+
+You should aim for:
+
+- a consistent font family and size
+- restrained use of color
+- minimal distractions (no unnecessary gridlines)
+- consistent sizing across figures
+
+For now, theme_minimal() or theme_classic() are good defaults. Later, a custom lab theme can be added and reused everywhere.
+
+---
+
+### 5. Exporting figures
+
+Export figures with explicit size and resolution:
+
+```r
+ggsave(
+  "figures/example_plot.pdf",
+  width = 8,
+  height = 5,
+  units = "in",
+  dpi = 300
+)
+```
+
+Recommendations:
+
+- use vector formats (PDF, SVG) for publications
+- embed intent into filenames
+- keep figures in a dedicated folder
+
+---
+
+### 6. Reproducibility principles
+
+Plots should be:
+
+- generated from code, not GUIs
+- fully reproducible from raw data
+- styled using functions, not copy-paste
+
+Aim to write small helper functions such as:
+
+- theme_lab()
+- scale_color_lab()
+- scale_fill_lab()
+
+and reuse them across projects.
+
+---
+
+## Where this R section is going
+
+This space will grow to include:
+
+- reusable plotting patterns
+- helper functions
+- common domain patterns
+- references and recommended reading
+
+The goal is a growing knowledge base, not just a gallery.

@@ -1,0 +1,65 @@
+project:
+  type: website
+  output-dir: docs
+
+bibliography: references.bib
+csl: apa.csl
+suppress-bibliography: true
+
+website:
+  title: "CBE Chart Library"
+  open-graph: true
+  navbar:
+    logo: assets/img/cbe-favicon.png
+    left:
+
+      - href: index.qmd
+        text: Gallery
+
+      - text: Styling
+        menu:
+        - href: pages/styling/index.qmd
+          text: Guidelines
+        - href: pages/styling/color-palettes.qmd
+          text: Color palettes
+        - href: pages/styling/font-styles.qmd
+          text: Font styling
+
+      - text: Using Code
+        menu:
+        - href: pages/code/r.qmd
+          text: R
+        - href: pages/code/python.qmd
+          text: Python
+        - href: pages/code/git.qmd
+          text: Using Git
+        - href: pages/code/ai.qmd
+          text: Using AI
+        - href: pages/code/manuscripts.qmd
+          text: Generating manuscripts
+      
+      - href: pages/resources/index.qmd
+        text: Resources
+
+    right:
+      - icon: github
+        href: https://github.com/t-kramer/plot-library
+        aria-label: GitHub repository
+      - href: pages/about.qmd
+
+
+  page-footer:
+      left: |
+        Created by [t-kramer](https://github.com/t-kramer)
+
+      right: |
+        Built with [Quarto](https://quarto.org)
+
+
+format:
+  html:
+    theme: quartz
+    css: styles/custom.css
+    toc: true
+    grid:
+      body-width: 900px

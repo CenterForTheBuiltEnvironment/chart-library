@@ -1,0 +1,98 @@
+/* Tweak body font size & max width */
+body {
+  font-size: 16px;
+}
+
+/* Slightly widen content to give more room for code and plots */
+main.content {
+  max-width: 900px;
+}
+
+/* Make code blocks a bit more compact */
+.code-with-output .sourceCode {
+  font-size: 0.9rem;
+}
+
+
+/* Plot Library card image padding */
+.quarto-listing .card-img-top {
+  padding: 0.5rem;
+  background-color: #ffffff;
+}
+
+/* Optional: give cards slightly rounded corners */
+.quarto-listing .card {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Optional: more breathing room inside cards */
+.quarto-listing .card-body {
+  padding: 0.75rem 1rem;
+}
+
+
+/* Style all figures inside pages (but NOT listing cards) */
+main.content img {
+  max-height: 500px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+/* Optional: subtle border around plots */
+main.content img {
+  border: 1px solid #ddd;
+}
+
+
+/* Inline color swatches for palette tables */
+.swatch {
+  display: inline-block;
+  width: 5rem;              /* ← makes all swatches the same length */
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  background: var(--swatch-color, #cccccc);
+  color: #ffffff;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+}
+
+/* For light backgrounds where you want dark text */
+.swatch.light {
+  color: #222222;
+}
+
+
+/* Folded / unfolded code blocks */
+div.sourceCode {
+  background-color: rgba(255, 255, 255, 0.8); /* white-ish, transparent */
+  border-radius: 12px;
+  padding: 0.75em;
+}
+
+/* Inner code area */
+div.sourceCode pre {
+  background-color: transparent;
+}
+
+/* Toggle button */
+button.code-fold-toggle {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  border: none;
+}
+
+
+/* Callout header: improve contrast */
+.callout > .callout-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #1f2933; /* dark slate */
+  font-weight: 600;
+}
+
+/* Optional: callout body text */
+.callout > .callout-body {
+  color: #e5e7eb; /* slightly brighter than Quartz default */
+}

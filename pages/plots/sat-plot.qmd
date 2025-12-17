@@ -1,0 +1,22 @@
+---
+title: "Occupant satisfaction with IEQ parameters"
+description: "Standard CBE plot to visualize satisfaction with IEQ parameters."
+categories: ["Survey data", "R"]
+source: "@parkinsonCommonSourcesOccupant2023"
+source-doi: "https://doi.org/10.5334/bc.274"
+code-r: "https://github.com/your-org/your-repo/path/to/tsv_vs_temp.R"
+code-python: None
+code-contributor: "T. Kramer"
+---
+
+![](sat-plot.png){.preview-image}
+
+
+(Here you later put the full explanation, R/Python code chunks, etc.)
+
+::: {.callout-note}
+**Source:** {{< meta source >}} <br>
+**DOI**: [{{< meta source-doi >}}]({{< meta source-doi >}}) <br>
+
+**Code:** [View R code of similar plot on GitHub]({{< meta code-r >}})  ·  Added by {{< meta code-contributor >}}
+:::

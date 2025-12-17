@@ -1,0 +1,162 @@
+---
+title: "Resources"
+---
+
+This page collects useful resources for **data visualization** and **plotting** in the context of building science and indoor environmental quality.
+
+The goal is to provide a starting point for:
+
+- learning fundamentals of good visualization
+- going deeper into R and Python plotting ecosystems
+- finding reference material for specific tools and topics
+
+Over time, this page can be updated with lab-specific recommendations and notes.
+
+---
+
+## Reading
+
+### General data visualization
+
+These books focus on **visualization principles** rather than specific tools:
+
+- **The Visual Display of Quantitative Information – Edward Tufte**  
+  https://www.edwardtufte.com/tufte/books_vdqi
+
+- **Envisioning Information – Edward Tufte**  
+  https://www.edwardtufte.com/tufte/books_ei
+
+- **Data Visualization: A Practical Introduction – Kieran Healy**  
+  https://socviz.co/
+
+- **Fundamentals of Data Visualization – Claus O. Wilke**  
+  https://clauswilke.com/dataviz/
+
+- **Storytelling with Data – Cole Nussbaumer Knaflic**  
+  https://www.storytellingwithdata.com/books
+
+---
+
+### R and ggplot2
+
+Resources for R visualization:
+
+- **R for Data Science – Wickham & Grolemund**  
+  https://r4ds.had.co.nz/
+
+- **ggplot2: Elegant Graphics for Data Analysis – Hadley Wickham**  
+  https://ggplot2-book.org/
+
+- **R Graphics Cookbook – Winston Chang**  
+  https://r-graphics.org/
+
+- **The official ggplot2 documentation**  
+  https://ggplot2.tidyverse.org/
+
+---
+
+### Python visualization
+
+Resources for Python plotting:
+
+- **Python Data Science Handbook – Jake VanderPlas**  
+  https://jakevdp.github.io/PythonDataScienceHandbook/
+
+- **Python for Data Analysis – Wes McKinney**  
+  https://wesmckinney.com/book/
+
+- **Matplotlib official documentation**  
+  https://matplotlib.org/stable/index.html
+
+- **Matplotlib tutorials**  
+  https://matplotlib.org/stable/tutorials/index.html
+
+- **Seaborn documentation**  
+  https://seaborn.pydata.org/
+
+---
+
+## Packages
+
+### R
+
+Core R plotting ecosystem:
+
+- **ggplot2**
+    https://ggplot2.tidyverse.org/
+
+- **patchwork**
+    https://patchwork.data-imaginist.com/
+
+- **cowplot**
+    https://wilkelab.org/cowplot/
+
+- **viridis**
+    https://sjmgarnier.github.io/viridis/
+
+
+---
+
+### Python
+
+Core Python plotting ecosystem:
+
+- **matplotlib**  
+  https://matplotlib.org/
+
+- **pandas**  
+  https://pandas.pydata.org/
+
+- **seaborn**  
+  https://seaborn.pydata.org/
+
+- **plotly**  
+  https://plotly.com/python/
+
+- **geopandas**  
+  https://geopandas.org/
+
+- **cartopy**  
+  https://scitools.org.uk/cartopy/docs/latest/
+
+- **xarray** (time series & gridded data)  
+  https://docs.xarray.dev/en/stable/
+
+---
+
+## Other useful resources
+
+### Reproducible research & publishing
+
+- **Quarto documentation**  
+  https://quarto.org/
+
+- **R Markdown**  
+  https://rmarkdown.rstudio.com/
+
+- **Jupyter Notebook documentation**  
+  https://jupyter.org/documentation
+
+---
+
+### Color and accessibility
+
+- **ColorBrewer palettes**  
+  https://colorbrewer2.org/
+
+- **Accessible color palettes**  
+  https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html
+
+---
+
+### Inspiration & galleries
+
+- **FlowingData**  
+  https://flowingdata.com/
+
+- **From Data to Viz**  
+  https://www.data-to-viz.com/
+
+- **Observable notebooks**  
+  https://observablehq.com/
+

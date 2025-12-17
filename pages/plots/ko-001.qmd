@@ -1,0 +1,18 @@
+---
+title: "Temporal autonomy for IEQ parameters"
+description: "Hourly autonomy map and annual summary for luminous autonomy, thermal autonomy, and ventilation autonomy."
+categories: ["Simulation", "Timeseries data", "Snapshot"]
+source: "@koVentilationThermalLuminous2018"
+source-doi: "https://doi.org/10.1016/j.buildenv.2018.08.038"
+code-r: None
+code-python: None
+code-contributor: None
+---
+
+![](ko-001.png){.preview-image}
+
+
+::: {.callout-note}
+**Source:** {{< meta source >}} <br>
+**DOI**: [{{< meta source-doi >}}]({{< meta source-doi >}}) <br>
+:::

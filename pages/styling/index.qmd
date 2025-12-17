@@ -1,0 +1,56 @@
+
+---
+page-navigation: true
+---
+
+# Styling Guidelines
+
+Internally, we define **default visual standards** for plots and figures. The main goals are:
+
+- **clarity** – figures should be easy to interpret
+- **consistency** – plots should look coherent across projects
+- **reproducibility** – formatting choices should be deliberate and documented
+- **publication-readiness** – figures should scale cleanly from reports to journal submissions
+
+These recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.
+
+---
+
+### General plotting guidelines
+
+- [ ] **Use a sans-serif font type.** <br>
+      Fonts like Arial or Helvetica are easier to read and are usually the font of choice for labels and annotations.
+
+- [ ] **Use standard journal column widths.** <br>
+      When preparing figures for scientific publications using standard widths (e.g. single or double column) is critical to make decisions on font size and aspect ratio.
+  - Single-column: `89 mm`
+  - Two-column: `183 mm`
+- [ ] **Use an appropriate font size.** <br>
+      Everything smaller than `7pt` this is usually too small for axis labels, tick labels, and legend text.
+- [ ] **Use a neutral background.** <br>
+      Usually a white or transparent background is best when exporting PNGs (e.g., for slides).
+- [ ] **Avoid using borders and frames.** <br>
+      Unless they are needed for clarity.
+- [ ] **Use 4–6 tick labels or less.** <br>
+      More ticks reduce clarity and add unnecessary detail.
+- [ ] **Use detailed captions.** <br>
+      The figure and caption should be understandable without referring back to the main text.
+
+
+::: {.callout-important}
+## Things to avoid
+
+- **Avoid pie charts.**  
+  Bar charts usually communicate the same information more clearly and comparably.
+
+- **Avoid 3D charts.**  
+  When rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.
+
+- **Avoid gridlines by default.**  
+  Gridlines were historically used to assist manual interpretation.  
+  In modern workflows, it is better to:
+  - share the underlying dataset, and  
+  - add gridlines only if they improve interpretability.
+:::
+
+

@@ -1,0 +1,25 @@
+---
+title: "Thermal preference"
+description: "Distribution of thermal preference votes, e.g from survey data."
+categories: ["Survey data", "R"]
+code-r: "https://github.com/t-kramer/plot-library/blob/main/src/R/plots/tpv.R"
+code-python: None
+code-contributor: "T. Kramer"
+---
+
+```{r tsv, fig.width = 89/25.4, fig.height = 60/25.4}
+#| file: "../../src/R/plots/tpv.R"
+#| code-fold: true
+#| echo: true
+#| eval: true
+#| message: false
+#| warning: false
+#| out-width: 80%
+#| fig-align: center
+#| fig-dpi: 300
+```
+
+
+::: {.callout-note}
+**Code:** [View R code on GitHub]({{< meta code-r >}})  ·  Added by {{< meta code-contributor >}}
+:::

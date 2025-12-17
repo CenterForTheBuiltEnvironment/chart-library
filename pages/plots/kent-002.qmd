@@ -1,0 +1,18 @@
+---
+title: "Occupant satisfaction with building by category"
+description: "Plot comparing thermal satisfaction in different building categories."
+categories: ["Survey data", "Snapshot"]
+source: "@kentIndoorEnvironmentalQuality2024"
+source-doi: "https://doi.org/10.1038/s41598-024-65768-w"
+code-r: None
+code-python: None
+code-contributor: None
+---
+
+![](kent-002.png){.preview-image}
+
+
+::: {.callout-note}
+**Source:** {{< meta source >}} <br>
+**DOI**: [{{< meta source-doi >}}]({{< meta source-doi >}}) <br>
+:::

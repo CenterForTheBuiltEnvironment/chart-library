@@ -1,0 +1,142 @@
+---
+title: "Using AI in Plotting and Analysis"
+---
+
+This page provides guidance on how to use AI tools (such as ChatGPT and coding assistants) responsibly and effectively when developing figures, analyzing data, and writing code.
+
+AI is treated here as a **support tool**, not a replacement for scientific judgment or statistical reasoning.
+
+---
+
+## What AI is good at
+
+AI tools are particularly useful for:
+
+### Code assistance
+- generating boilerplate Python/R code
+- explaining unfamiliar functions or syntax
+- converting logic between languages (e.g., R ↔ Python)
+- writing helper functions
+- debugging simple errors
+
+### Visualization prototyping
+- generating first drafts of plots
+- suggesting plot types for a dataset
+- translating conceptual ideas into code
+- exploring alternative encodings (e.g., color vs shape vs faceting)
+
+### Documentation and writing
+- drafting README files or documentation pages
+- improving clarity of plot explanations
+- summarizing code behavior
+- generating examples and templates
+
+---
+
+## What AI is not good at
+
+AI should **not** be trusted blindly for:
+
+### Statistical correctness
+- model selection
+- interpreting results
+- validating assumptions
+- error analysis
+
+Always verify statistical reasoning independently.
+
+### Scientific interpretation
+AI does not understand your domain.  
+It cannot judge whether a result is *scientifically meaningful*.
+
+### Data privacy and ethics
+Do not upload:
+
+- confidential data
+- personally identifiable information
+- unpublished results
+- sensitive datasets
+
+When in doubt, assume the data should not be shared.
+
+---
+
+## Good workflow: how to integrate AI into plotting
+
+A recommended workflow:
+
+1. You define the question.
+2. You clean and structure the data.
+3. You ask AI for plotting ideas or code templates.
+4. You review and adapt the code.
+5. You validate the output visually and statistically.
+6. You refine styling and labeling manually.
+7. You document the final reasoning in your own words.
+
+AI is a **drafting assistant**, not an author.
+
+---
+
+## Asking better questions
+
+AI works best when you provide:
+
+- a small reproducible example
+- a clear description of the outcome you want
+- context about your dataset
+- constraints (e.g., publication quality, grayscale safe, accessible colors)
+
+Example:
+
+> “I have a dataframe with time, temperature, and TSV.  
+> I want a plot that shows trend and uncertainty bands, in a style suitable for a journal paper.  
+> I am using Python/matplotlib.”
+
+Poor prompts are vague; good prompts are specific.
+
+---
+
+## Validation checklist
+
+Before trusting AI-generated code or plots:
+
+- Does the chart type match my data?
+- Are axes correctly labeled and scaled?
+- Are units correct?
+- Are categories ordered meaningfully?
+- Are colors accessible?
+- Does the code reproduce the same figure on rerun?
+- Do I understand what every major line of code does?
+
+If the answer is “no” to any of these, treat the output as a draft, not final work.
+
+---
+
+## Transparency and acknowledgment
+
+If AI tools made a **substantial contribution** to:
+
+- code generation
+- writing
+- figure design
+
+consider:
+
+- documenting this in internal project notes
+- acknowledging AI assistance when appropriate (e.g., teaching material, tutorials)
+
+Do not list AI as an author of scientific work.
+
+---
+
+## How this page will evolve
+
+Over time, this page may include:
+
+- examples of good prompts
+- case studies
+- AI-assisted figure walkthroughs
+- lab policies on AI use
+- reproducibility guidelines
+
+Treat AI as a powerful tool that improves productivity — not as a substitute for expertise.
