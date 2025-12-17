@@ -13,3 +13,7 @@ _site/
 .Rprofile
 .Rhistory
 renv/
+
+
+# Claude Code
+CLAUDE.md
