@@ -43,7 +43,7 @@ website:
 
     right:
       - icon: github
-        href: https://github.com/t-kramer/plot-library
+        href: https://centerforthebuiltenvironment.github.io/chart-library/
         aria-label: GitHub repository
       - href: pages/about.qmd
 
