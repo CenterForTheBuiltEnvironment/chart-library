@@ -10,7 +10,7 @@ The goal is to provide a starting point for:
 - going deeper into R and Python plotting ecosystems
 - finding reference material for specific tools and topics
 
-Over time, this page can be updated with lab-specific recommendations and notes.
+Over time, this page will be updated with more recommendations and notes.
 
 ---
 
@@ -21,19 +21,13 @@ Over time, this page can be updated with lab-specific recommendations and notes.
 These books focus on **visualization principles** rather than specific tools:
 
 - **The Visual Display of Quantitative Information – Edward Tufte**  
-  https://www.edwardtufte.com/tufte/books_vdqi
-
-- **Envisioning Information – Edward Tufte**  
-  https://www.edwardtufte.com/tufte/books_ei
+  [https://www.edwardtufte.com/tufte/books_vdqi](https://www.edwardtufte.com/tufte/books_vdqi)
 
 - **Data Visualization: A Practical Introduction – Kieran Healy**  
-  https://socviz.co/
+  [https://socviz.co/](https://socviz.co/)
 
 - **Fundamentals of Data Visualization – Claus O. Wilke**  
-  https://clauswilke.com/dataviz/
-
-- **Storytelling with Data – Cole Nussbaumer Knaflic**  
-  https://www.storytellingwithdata.com/books
+  [https://clauswilke.com/dataviz/](https://clauswilke.com/dataviz/)
 
 ---
 
@@ -41,17 +35,17 @@ These books focus on **visualization principles** rather than specific tools:
 
 Resources for R visualization:
 
-- **R for Data Science – Wickham & Grolemund**  
-  https://r4ds.had.co.nz/
+- **R for Data Science (2e) – Wickham, Çetinkaya-Rundel & Grolemund**  
+  [https://r4ds.hadley.nz](https://r4ds.hadley.nz)
 
-- **ggplot2: Elegant Graphics for Data Analysis – Hadley Wickham**  
-  https://ggplot2-book.org/
+- **ggplot2: Elegant Graphics for Data Analysis (3e) – Wickham, Navarro & Pedersen**  
+  [https://ggplot2-book.org/](https://ggplot2-book.org/)
 
 - **R Graphics Cookbook – Winston Chang**  
-  https://r-graphics.org/
+  [https://r-graphics.org/](https://r-graphics.org/)
 
 - **The official ggplot2 documentation**  
-  https://ggplot2.tidyverse.org/
+  [https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/)
 
 ---
 
@@ -60,19 +54,19 @@ Resources for R visualization:
 Resources for Python plotting:
 
 - **Python Data Science Handbook – Jake VanderPlas**  
-  https://jakevdp.github.io/PythonDataScienceHandbook/
+  [https://jakevdp.github.io/PythonDataScienceHandbook/](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 - **Python for Data Analysis – Wes McKinney**  
-  https://wesmckinney.com/book/
+  [https://wesmckinney.com/book/](https://wesmckinney.com/book/)
 
 - **Matplotlib official documentation**  
-  https://matplotlib.org/stable/index.html
+  [https://matplotlib.org/stable/index.html](https://matplotlib.org/stable/index.html)
 
 - **Matplotlib tutorials**  
-  https://matplotlib.org/stable/tutorials/index.html
+  [https://matplotlib.org/stable/tutorials/index.html](https://matplotlib.org/stable/tutorials/index.html)
 
 - **Seaborn documentation**  
-  https://seaborn.pydata.org/
+  [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
 
 ---
 
@@ -83,16 +77,13 @@ Resources for Python plotting:
 Core R plotting ecosystem:
 
 - **ggplot2**
-    https://ggplot2.tidyverse.org/
+    [https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/)
 
 - **patchwork**
-    https://patchwork.data-imaginist.com/
-
-- **cowplot**
-    https://wilkelab.org/cowplot/
+    [https://patchwork.data-imaginist.com/](https://patchwork.data-imaginist.com/)
 
 - **viridis**
-    https://sjmgarnier.github.io/viridis/
+    [https://sjmgarnier.github.io/viridis/](https://sjmgarnier.github.io/viridis/)
 
 
 ---
@@ -102,25 +93,16 @@ Core R plotting ecosystem:
 Core Python plotting ecosystem:
 
 - **matplotlib**  
-  https://matplotlib.org/
+  [https://matplotlib.org/](https://matplotlib.org/)
 
 - **pandas**  
-  https://pandas.pydata.org/
+  [https://pandas.pydata.org/](https://pandas.pydata.org/)
 
 - **seaborn**  
-  https://seaborn.pydata.org/
+  [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
 
 - **plotly**  
-  https://plotly.com/python/
-
-- **geopandas**  
-  https://geopandas.org/
-
-- **cartopy**  
-  https://scitools.org.uk/cartopy/docs/latest/
-
-- **xarray** (time series & gridded data)  
-  https://docs.xarray.dev/en/stable/
+  [https://plotly.com/python/](https://plotly.com/python/)
 
 ---
 
@@ -129,34 +111,34 @@ Core Python plotting ecosystem:
 ### Reproducible research & publishing
 
 - **Quarto documentation**  
-  https://quarto.org/
+  [https://quarto.org/](https://quarto.org/)
 
 - **R Markdown**  
-  https://rmarkdown.rstudio.com/
+  [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/)
 
 - **Jupyter Notebook documentation**  
-  https://jupyter.org/documentation
+  [https://jupyter.org/documentation](https://jupyter.org/documentation)
 
 ---
 
 ### Color and accessibility
 
 - **ColorBrewer palettes**  
-  https://colorbrewer2.org/
+  [https://colorbrewer2.org/](https://colorbrewer2.org/)
 
 - **Accessible color palettes**  
-  https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html
+  [https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)
 
 ---
 
 ### Inspiration & galleries
 
 - **FlowingData**  
-  https://flowingdata.com/
+  [https://flowingdata.com/](https://flowingdata.com/)
 
 - **From Data to Viz**  
-  https://www.data-to-viz.com/
+  [https://www.data-to-viz.com/](https://www.data-to-viz.com/)
 
-- **Observable notebooks**  
-  https://observablehq.com/
+- **Observable HG Blog**  
+  [https://observablehq.com/blog](https://observablehq.com/blog)
 

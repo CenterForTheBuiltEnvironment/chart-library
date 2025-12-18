@@ -74,28 +74,28 @@
     "href": "pages/resources/index.html",
     "title": "Resources",
     "section": "",
-    "text": "This page collects useful resources for data visualization and plotting in the context of building science and indoor environmental quality.\nThe goal is to provide a starting point for:\nOver time, this page can be updated with lab-specific recommendations and notes."
+    "text": "This page collects useful resources for data visualization and plotting in the context of building science and indoor environmental quality.\nThe goal is to provide a starting point for:\nOver time, this page will be updated with more recommendations and notes."
   },
   {
     "objectID": "pages/resources/index.html#reading",
     "href": "pages/resources/index.html#reading",
     "title": "Resources",
     "section": "Reading",
-    "text": "Reading\n\nGeneral data visualization\nThese books focus on visualization principles rather than specific tools:\n\nThe Visual Display of Quantitative Information – Edward Tufte\nhttps://www.edwardtufte.com/tufte/books_vdqi\nEnvisioning Information – Edward Tufte\nhttps://www.edwardtufte.com/tufte/books_ei\nData Visualization: A Practical Introduction – Kieran Healy\nhttps://socviz.co/\nFundamentals of Data Visualization – Claus O. Wilke\nhttps://clauswilke.com/dataviz/\nStorytelling with Data – Cole Nussbaumer Knaflic\nhttps://www.storytellingwithdata.com/books\n\n\n\n\nR and ggplot2\nResources for R visualization:\n\nR for Data Science – Wickham & Grolemund\nhttps://r4ds.had.co.nz/\nggplot2: Elegant Graphics for Data Analysis – Hadley Wickham\nhttps://ggplot2-book.org/\nR Graphics Cookbook – Winston Chang\nhttps://r-graphics.org/\nThe official ggplot2 documentation\nhttps://ggplot2.tidyverse.org/\n\n\n\n\nPython visualization\nResources for Python plotting:\n\nPython Data Science Handbook – Jake VanderPlas\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nPython for Data Analysis – Wes McKinney\nhttps://wesmckinney.com/book/\nMatplotlib official documentation\nhttps://matplotlib.org/stable/index.html\nMatplotlib tutorials\nhttps://matplotlib.org/stable/tutorials/index.html\nSeaborn documentation\nhttps://seaborn.pydata.org/"
+    "text": "Reading\n\nGeneral data visualization\nThese books focus on visualization principles rather than specific tools:\n\nThe Visual Display of Quantitative Information – Edward Tufte\nhttps://www.edwardtufte.com/tufte/books_vdqi\nData Visualization: A Practical Introduction – Kieran Healy\nhttps://socviz.co/\nFundamentals of Data Visualization – Claus O. Wilke\nhttps://clauswilke.com/dataviz/\n\n\n\n\nR and ggplot2\nResources for R visualization:\n\nR for Data Science (2e) – Wickham, Çetinkaya-Rundel & Grolemund\nhttps://r4ds.hadley.nz\nggplot2: Elegant Graphics for Data Analysis (3e) – Wickham, Navarro & Pedersen\nhttps://ggplot2-book.org/\nR Graphics Cookbook – Winston Chang\nhttps://r-graphics.org/\nThe official ggplot2 documentation\nhttps://ggplot2.tidyverse.org/\n\n\n\n\nPython visualization\nResources for Python plotting:\n\nPython Data Science Handbook – Jake VanderPlas\nhttps://jakevdp.github.io/PythonDataScienceHandbook/\nPython for Data Analysis – Wes McKinney\nhttps://wesmckinney.com/book/\nMatplotlib official documentation\nhttps://matplotlib.org/stable/index.html\nMatplotlib tutorials\nhttps://matplotlib.org/stable/tutorials/index.html\nSeaborn documentation\nhttps://seaborn.pydata.org/"
   },
   {
     "objectID": "pages/resources/index.html#packages",
     "href": "pages/resources/index.html#packages",
     "title": "Resources",
     "section": "Packages",
-    "text": "Packages\n\nR\nCore R plotting ecosystem:\n\nggplot2 https://ggplot2.tidyverse.org/\npatchwork https://patchwork.data-imaginist.com/\ncowplot https://wilkelab.org/cowplot/\nviridis https://sjmgarnier.github.io/viridis/\n\n\n\n\nPython\nCore Python plotting ecosystem:\n\nmatplotlib\nhttps://matplotlib.org/\npandas\nhttps://pandas.pydata.org/\nseaborn\nhttps://seaborn.pydata.org/\nplotly\nhttps://plotly.com/python/\ngeopandas\nhttps://geopandas.org/\ncartopy\nhttps://scitools.org.uk/cartopy/docs/latest/\nxarray (time series & gridded data)\nhttps://docs.xarray.dev/en/stable/"
+    "text": "Packages\n\nR\nCore R plotting ecosystem:\n\nggplot2 https://ggplot2.tidyverse.org/\npatchwork https://patchwork.data-imaginist.com/\nviridis https://sjmgarnier.github.io/viridis/\n\n\n\n\nPython\nCore Python plotting ecosystem:\n\nmatplotlib\nhttps://matplotlib.org/\npandas\nhttps://pandas.pydata.org/\nseaborn\nhttps://seaborn.pydata.org/\nplotly\nhttps://plotly.com/python/"
   },
   {
     "objectID": "pages/resources/index.html#other-useful-resources",
     "href": "pages/resources/index.html#other-useful-resources",
     "title": "Resources",
     "section": "Other useful resources",
-    "text": "Other useful resources\n\nReproducible research & publishing\n\nQuarto documentation\nhttps://quarto.org/\nR Markdown\nhttps://rmarkdown.rstudio.com/\nJupyter Notebook documentation\nhttps://jupyter.org/documentation\n\n\n\n\nColor and accessibility\n\nColorBrewer palettes\nhttps://colorbrewer2.org/\nAccessible color palettes\nhttps://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\n\n\n\n\nInspiration & galleries\n\nFlowingData\nhttps://flowingdata.com/\nFrom Data to Viz\nhttps://www.data-to-viz.com/\nObservable notebooks\nhttps://observablehq.com/"
+    "text": "Other useful resources\n\nReproducible research & publishing\n\nQuarto documentation\nhttps://quarto.org/\nR Markdown\nhttps://rmarkdown.rstudio.com/\nJupyter Notebook documentation\nhttps://jupyter.org/documentation\n\n\n\n\nColor and accessibility\n\nColorBrewer palettes\nhttps://colorbrewer2.org/\nAccessible color palettes\nhttps://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\n\n\n\n\nInspiration & galleries\n\nFlowingData\nhttps://flowingdata.com/\nFrom Data to Viz\nhttps://www.data-to-viz.com/\nObservable HG Blog\nhttps://observablehq.com/blog"
   },
   {
     "objectID": "index.html",
@@ -194,5 +194,40 @@
     "title": "Thermal preference",
     "section": "",
     "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_preference_d &lt;- stacked_pct_data(survey, thermal_preference)\n\nplot_stacked_pct(survey, thermal_preference, thermal_preference_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
+  },
+  {
+    "objectID": "CLAUDE.html",
+    "href": "CLAUDE.html",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is the CBE Chart Library, a Quarto-based website that serves as a gallery and reference for data visualization in building science and indoor environmental quality research. The site is maintained by UC Berkeley’s Center for the Built Environment (CBE).\n\n\n\n# Preview the site locally\nquarto preview\n\n# Build the site (outputs to docs/)\nquarto render\n\n# Render a single page\nquarto render pages/plots/tav.qmd\n\n\n\nThe project uses renv for R package management. R version 4.4.1.\n# Restore R packages\nR -e \"renv::restore()\"\n\n\n\n\n\n\npages/plots/ - Individual plot gallery entries (.qmd files that reference R scripts)\npages/styling/ - Style guidelines, color palettes, font recommendations\npages/code/ - Tutorials for R, Python, Git, AI tools\nsrc/R/ - Reusable R source code\n\nx_data.R - Sample data generation and factor level definitions\nx_func.R - Plotting helper functions (e.g., plot_stacked_pct, palette_strip_plot)\nx_theme.R - Color palette definitions\nplots/ - Individual plot scripts sourced by gallery pages\n\ndocs/ - Generated site output (committed for GitHub Pages)\nstyles/custom.css - Site-wide CSS customizations\n\n\n\n\nEach plot in the gallery is a .qmd file in pages/plots/ that: 1. Defines metadata (title, description, categories, contributor) 2. Sources an R script from src/R/plots/ using #| file: directive 3. The R script sources shared helpers from src/R/x_*.R files\nExample pattern in pages/plots/tav.qmd:\n#| file: \"../../src/R/plots/tav.R\"\n\n\n\nStandard palettes are defined in src/R/x_theme.R: - thermal_sensation_palette - 7-point cold-to-hot scale - thermal_preference_palette - 3-point cooler/no change/warmer scale - acceptability_palette - 5-point unacceptable-to-acceptable scale\n\n\n\nFrom pages/styling/index.qmd: - Sans-serif fonts (Arial, Helvetica) - Minimum 7pt font size for labels - Standard journal widths: single-column 89mm, two-column 183mm - White/transparent backgrounds - Avoid pie charts, 3D charts, and gridlines by default"
+  },
+  {
+    "objectID": "CLAUDE.html#project-overview",
+    "href": "CLAUDE.html#project-overview",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "This is the CBE Chart Library, a Quarto-based website that serves as a gallery and reference for data visualization in building science and indoor environmental quality research. The site is maintained by UC Berkeley’s Center for the Built Environment (CBE)."
+  },
+  {
+    "objectID": "CLAUDE.html#build-commands",
+    "href": "CLAUDE.html#build-commands",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "# Preview the site locally\nquarto preview\n\n# Build the site (outputs to docs/)\nquarto render\n\n# Render a single page\nquarto render pages/plots/tav.qmd"
+  },
+  {
+    "objectID": "CLAUDE.html#r-environment",
+    "href": "CLAUDE.html#r-environment",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "The project uses renv for R package management. R version 4.4.1.\n# Restore R packages\nR -e \"renv::restore()\""
+  },
+  {
+    "objectID": "CLAUDE.html#architecture",
+    "href": "CLAUDE.html#architecture",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "pages/plots/ - Individual plot gallery entries (.qmd files that reference R scripts)\npages/styling/ - Style guidelines, color palettes, font recommendations\npages/code/ - Tutorials for R, Python, Git, AI tools\nsrc/R/ - Reusable R source code\n\nx_data.R - Sample data generation and factor level definitions\nx_func.R - Plotting helper functions (e.g., plot_stacked_pct, palette_strip_plot)\nx_theme.R - Color palette definitions\nplots/ - Individual plot scripts sourced by gallery pages\n\ndocs/ - Generated site output (committed for GitHub Pages)\nstyles/custom.css - Site-wide CSS customizations\n\n\n\n\nEach plot in the gallery is a .qmd file in pages/plots/ that: 1. Defines metadata (title, description, categories, contributor) 2. Sources an R script from src/R/plots/ using #| file: directive 3. The R script sources shared helpers from src/R/x_*.R files\nExample pattern in pages/plots/tav.qmd:\n#| file: \"../../src/R/plots/tav.R\"\n\n\n\nStandard palettes are defined in src/R/x_theme.R: - thermal_sensation_palette - 7-point cold-to-hot scale - thermal_preference_palette - 3-point cooler/no change/warmer scale - acceptability_palette - 5-point unacceptable-to-acceptable scale\n\n\n\nFrom pages/styling/index.qmd: - Sans-serif fonts (Arial, Helvetica) - Minimum 7pt font size for labels - Standard journal widths: single-column 89mm, two-column 183mm - White/transparent backgrounds - Avoid pie charts, 3D charts, and gridlines by default"
   }
 ]

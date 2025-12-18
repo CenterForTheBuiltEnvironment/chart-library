@@ -9,6 +9,7 @@ source(here::here("src", "R", "x_func.R"))
 library(ggplot2)
 ```
 
+Below you can find some examples for typical color palettes used in our research publications. If you are looking for something more general, it is worth checking out [ColorBrewer](https://colorbrewer2.org/).
 
 ### Occupant satisfaction
 
