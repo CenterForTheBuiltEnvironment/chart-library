@@ -95,7 +95,7 @@
     "href": "pages/resources/index.html#other-useful-resources",
     "title": "Resources",
     "section": "Other useful resources",
-    "text": "Other useful resources\n\nReproducible research & publishing\n\nQuarto documentation\nhttps://quarto.org/\nR Markdown\nhttps://rmarkdown.rstudio.com/\nJupyter Notebook documentation\nhttps://jupyter.org/documentation\n\n\n\n\nColor and accessibility\n\nColorBrewer palettes\nhttps://colorbrewer2.org/\nAccessible color palettes\nhttps://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\n\n\n\n\nInspiration & galleries\n\nFlowingData\nhttps://flowingdata.com/\nFrom Data to Viz\nhttps://www.data-to-viz.com/\nObservable HG Blog\nhttps://observablehq.com/blog"
+    "text": "Other useful resources\n\nReproducible research & publishing\n\nQuarto documentation\nhttps://quarto.org/\nR Markdown\nhttps://rmarkdown.rstudio.com/\nJupyter Notebook documentation\nhttps://jupyter.org/documentation\nStart using GitHub https://docs.github.com/en/get-started\n\n\n\n\nColor and accessibility\n\nColorBrewer palettes\nhttps://colorbrewer2.org/\nAccessible color palettes\nhttps://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\n\n\n\n\nInspiration & galleries\n\nFlowingData\nhttps://flowingdata.com/\nFrom Data to Viz\nhttps://www.data-to-viz.com/\nObservable HG Blog\nhttps://observablehq.com/blog"
   },
   {
     "objectID": "index.html",
@@ -229,5 +229,82 @@
     "title": "CLAUDE.md",
     "section": "",
     "text": "pages/plots/ - Individual plot gallery entries (.qmd files that reference R scripts)\npages/styling/ - Style guidelines, color palettes, font recommendations\npages/code/ - Tutorials for R, Python, Git, AI tools\nsrc/R/ - Reusable R source code\n\nx_data.R - Sample data generation and factor level definitions\nx_func.R - Plotting helper functions (e.g., plot_stacked_pct, palette_strip_plot)\nx_theme.R - Color palette definitions\nplots/ - Individual plot scripts sourced by gallery pages\n\ndocs/ - Generated site output (committed for GitHub Pages)\nstyles/custom.css - Site-wide CSS customizations\n\n\n\n\nEach plot in the gallery is a .qmd file in pages/plots/ that: 1. Defines metadata (title, description, categories, contributor) 2. Sources an R script from src/R/plots/ using #| file: directive 3. The R script sources shared helpers from src/R/x_*.R files\nExample pattern in pages/plots/tav.qmd:\n#| file: \"../../src/R/plots/tav.R\"\n\n\n\nStandard palettes are defined in src/R/x_theme.R: - thermal_sensation_palette - 7-point cold-to-hot scale - thermal_preference_palette - 3-point cooler/no change/warmer scale - acceptability_palette - 5-point unacceptable-to-acceptable scale\n\n\n\nFrom pages/styling/index.qmd: - Sans-serif fonts (Arial, Helvetica) - Minimum 7pt font size for labels - Standard journal widths: single-column 89mm, two-column 183mm - White/transparent backgrounds - Avoid pie charts, 3D charts, and gridlines by default"
+  },
+  {
+    "objectID": "pages/code/git.html",
+    "href": "pages/code/git.html",
+    "title": "Using Git",
+    "section": "",
+    "text": "Quick link: Essential commands\nThis section introduces Git and GitHub for researchers who want to track changes, collaborate, and maintain reproducible workflows.\nVersion control is essential for any code-based research project. It allows you to:"
+  },
+  {
+    "objectID": "pages/code/git.html#what-is-git",
+    "href": "pages/code/git.html#what-is-git",
+    "title": "Using Git",
+    "section": "What is Git?",
+    "text": "What is Git?\nGit is a version control system that runs on your computer. It tracks changes to files in a project folder (called a repository). Every time you save a snapshot (called a commit), Git records what changed, when, and who made the change.\nGit works locally—you don’t need an internet connection to use it."
+  },
+  {
+    "objectID": "pages/code/git.html#what-is-github",
+    "href": "pages/code/git.html#what-is-github",
+    "title": "Using Git",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\nGitHub is a web platform that hosts Git repositories online. It adds:\n\ncloud backup for your code\ncollaboration features (pull requests, issues, code review)\nvisibility for sharing work publicly or with collaborators\n\nOther alternatives exist (GitLab, Bitbucket), but GitHub is the most common in research contexts.\nKey distinction: Git is the tool. GitHub is a service that uses Git."
+  },
+  {
+    "objectID": "pages/code/git.html#why-use-version-control",
+    "href": "pages/code/git.html#why-use-version-control",
+    "title": "Using Git",
+    "section": "Why use version control?",
+    "text": "Why use version control?\n1. No more “final_v2_REAL_final.R”: Instead of duplicating files with confusing names, Git tracks the full history of each file. You can always go back to any previous version.\n2. Safe experimentation: Create a branch to try something new. If it works, merge it in. If not, delete the branch. Your main code stays safe.\n3. Collaboration without chaos: Multiple people can work on the same project. Git handles merging changes and flags conflicts when edits overlap.\n4. Reproducibility: A Git history shows exactly how analysis evolved. Combined with good commit messages, it serves as a lab notebook for code."
+  },
+  {
+    "objectID": "pages/code/git.html#git-101-core-concepts",
+    "href": "pages/code/git.html#git-101-core-concepts",
+    "title": "Using Git",
+    "section": "Git 101: Core concepts",
+    "text": "Git 101: Core concepts\n\nRepository (repo)\nA folder tracked by Git. Contains your files plus a hidden .git folder that stores the version history.\n\n\nCommit\nA snapshot of your project at a point in time. Each commit has:\n\na unique ID (hash)\na message describing the change\na timestamp and author\n\n\n\nBranch\nA parallel line of development. The default branch is usually called main. You can create branches to work on features without affecting main.\n\n\nRemote\nA copy of your repository hosted elsewhere (e.g., on GitHub). You push commits to the remote and pull updates from it."
+  },
+  {
+    "objectID": "pages/code/git.html#basic-git-workflow",
+    "href": "pages/code/git.html#basic-git-workflow",
+    "title": "Using Git",
+    "section": "Basic Git workflow",
+    "text": "Basic Git workflow\nThe typical daily workflow:\n# 1. Check what's changed\ngit status\n\n# 2. Stage files you want to commit\ngit add filename.R\ngit add .                # stages all changes\n\n# 3. Commit with a message\ngit commit -m \"Add thermal comfort analysis\"\n\n# 4. Push to GitHub\ngit push"
+  },
+  {
+    "objectID": "pages/code/git.html#essential-commands",
+    "href": "pages/code/git.html#essential-commands",
+    "title": "Using Git",
+    "section": "Essential commands",
+    "text": "Essential commands\n\nSetup and configuration\n# Set your identity (once per machine)\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\n\n# Clone an existing repository\ngit clone https://github.com/user/repo.git\n\n# Initialize a new repository\ngit init\n\n\nDaily use\n# Check status of working directory\ngit status\n\n# View commit history\ngit log\ngit log --oneline        # compact view\n\n# Stage changes\ngit add &lt;file&gt;\ngit add .\n\n# Commit staged changes\ngit commit -m \"Descriptive message\"\n\n# Push commits to remote\ngit push\n\n# Pull latest changes from remote\ngit pull\n\n\nBranching\n# List branches\ngit branch\n\n# Create and switch to new branch\ngit checkout -b feature-name\n\n# Switch to existing branch\ngit checkout main\n\n# Merge branch into current branch\ngit merge feature-name\n\n\nUndoing things\n# Discard changes in working directory\ngit checkout -- &lt;file&gt;\n\n# Unstage a file (keep changes)\ngit reset HEAD &lt;file&gt;\n\n# View what changed\ngit diff\ngit diff --staged        # staged changes only"
+  },
+  {
+    "objectID": "pages/code/git.html#writing-good-commit-messages",
+    "href": "pages/code/git.html#writing-good-commit-messages",
+    "title": "Using Git",
+    "section": "Writing good commit messages",
+    "text": "Writing good commit messages\nCommit messages should explain why, not just what. Future you (and collaborators) will thank you.\nGood:\nFix temperature unit conversion in comfort model\n\nThe original code assumed Fahrenheit input but data is in Celsius.\nThis caused PMV calculations to be wildly off.\nLess useful:\nFixed bug\nKeep the first line under 50 characters. Add detail in the body if needed."
+  },
+  {
+    "objectID": "pages/code/git.html#recommended-workflow-for-research",
+    "href": "pages/code/git.html#recommended-workflow-for-research",
+    "title": "Using Git",
+    "section": "Recommended workflow for research",
+    "text": "Recommended workflow for research\n\nOne repo per project — keep data, code, and outputs together\nCommit often — small, logical chunks are easier to understand\nUse branches for experiments — keep main stable\nWrite meaningful messages — your future self will read them\nPush regularly — backup your work and enable collaboration"
+  },
+  {
+    "objectID": "pages/code/git.html#getting-started",
+    "href": "pages/code/git.html#getting-started",
+    "title": "Using Git",
+    "section": "Getting started",
+    "text": "Getting started\n\nOption 1: GitHub Desktop\nA graphical interface for Git. Good for beginners or those who prefer visual tools.\nDownload: desktop.github.com\n\n\nOption 2: Command line\nMore powerful and portable. The commands above work on any system with Git installed. This is what we recommend.\nDownload Git: git-scm.com\n\n\nOption 3: IDE integration\nRStudio, VS Code, and most editors have built-in Git support. Look for the “Git” or “Source Control” panel."
+  },
+  {
+    "objectID": "pages/code/git.html#further-resources",
+    "href": "pages/code/git.html#further-resources",
+    "title": "Using Git",
+    "section": "Further resources",
+    "text": "Further resources\n\nPro Git book — comprehensive and free\nGitHub Docs — official GitHub documentation\nOh Shit, Git!?! — how to fix common mistakes"
   }
 ]

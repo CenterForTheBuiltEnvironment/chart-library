@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>git – CBE Chart Library</title>
+<title>Using Git – CBE Chart Library</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,7 +106,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles/custom.css">
-<meta property="og:title" content="CBE Chart Library">
+<meta property="og:title" content="Using Git – CBE Chart Library">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="CBE Chart Library">
 </head>
 
@@ -153,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/t-kramer/plot-library"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+    <a class="nav-link" href="https://centerforthebuiltenvironment.github.io/chart-library/"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -172,17 +208,253 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-git" id="toc-what-is-git" class="nav-link active" data-scroll-target="#what-is-git">What is Git?</a></li>
+  <li><a href="#what-is-github" id="toc-what-is-github" class="nav-link" data-scroll-target="#what-is-github">What is GitHub?</a></li>
+  <li><a href="#why-use-version-control" id="toc-why-use-version-control" class="nav-link" data-scroll-target="#why-use-version-control">Why use version control?</a></li>
+  <li><a href="#git-101-core-concepts" id="toc-git-101-core-concepts" class="nav-link" data-scroll-target="#git-101-core-concepts">Git 101: Core concepts</a>
+  <ul class="collapse">
+  <li><a href="#repository-repo" id="toc-repository-repo" class="nav-link" data-scroll-target="#repository-repo">Repository (repo)</a></li>
+  <li><a href="#commit" id="toc-commit" class="nav-link" data-scroll-target="#commit">Commit</a></li>
+  <li><a href="#branch" id="toc-branch" class="nav-link" data-scroll-target="#branch">Branch</a></li>
+  <li><a href="#remote" id="toc-remote" class="nav-link" data-scroll-target="#remote">Remote</a></li>
+  </ul></li>
+  <li><a href="#basic-git-workflow" id="toc-basic-git-workflow" class="nav-link" data-scroll-target="#basic-git-workflow">Basic Git workflow</a></li>
+  <li><a href="#essential-commands" id="toc-essential-commands" class="nav-link" data-scroll-target="#essential-commands">Essential commands</a>
+  <ul class="collapse">
+  <li><a href="#setup-and-configuration" id="toc-setup-and-configuration" class="nav-link" data-scroll-target="#setup-and-configuration">Setup and configuration</a></li>
+  <li><a href="#daily-use" id="toc-daily-use" class="nav-link" data-scroll-target="#daily-use">Daily use</a></li>
+  <li><a href="#branching" id="toc-branching" class="nav-link" data-scroll-target="#branching">Branching</a></li>
+  <li><a href="#undoing-things" id="toc-undoing-things" class="nav-link" data-scroll-target="#undoing-things">Undoing things</a></li>
+  </ul></li>
+  <li><a href="#writing-good-commit-messages" id="toc-writing-good-commit-messages" class="nav-link" data-scroll-target="#writing-good-commit-messages">Writing good commit messages</a></li>
+  <li><a href="#recommended-workflow-for-research" id="toc-recommended-workflow-for-research" class="nav-link" data-scroll-target="#recommended-workflow-for-research">Recommended workflow for research</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further resources</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Using Git</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<p><strong>Quick link:</strong> <a href="#essential-commands">Essential commands</a></p>
+<hr>
+<p>This section introduces <strong>Git</strong> and <strong>GitHub</strong> for researchers who want to track changes, collaborate, and maintain reproducible workflows.</p>
+<p>Version control is essential for any code-based research project. It allows you to:</p>
+<ul>
+<li>track every change to your files over time</li>
+<li>revert to previous versions when something breaks</li>
+<li>collaborate without overwriting each other’s work</li>
+<li>maintain a clear history of how analysis evolved</li>
+</ul>
+<hr>
+<section id="what-is-git" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-git">What is Git?</h2>
+<p><strong>Git</strong> is a version control system that runs on your computer. It tracks changes to files in a project folder (called a repository). Every time you save a snapshot (called a commit), Git records what changed, when, and who made the change.</p>
+<p>Git works locally—you don’t need an internet connection to use it.</p>
+<hr>
+</section>
+<section id="what-is-github" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-github">What is GitHub?</h2>
+<p><strong>GitHub</strong> is a web platform that hosts Git repositories online. It adds:</p>
+<ul>
+<li>cloud backup for your code</li>
+<li>collaboration features (pull requests, issues, code review)</li>
+<li>visibility for sharing work publicly or with collaborators</li>
+</ul>
+<p>Other alternatives exist (GitLab, Bitbucket), but GitHub is the most common in research contexts.</p>
+<p><strong>Key distinction:</strong> Git is the tool. GitHub is a service that uses Git.</p>
+<hr>
+</section>
+<section id="why-use-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-version-control">Why use version control?</h2>
+<p><strong>1. No more “final_v2_REAL_final.R”</strong>: Instead of duplicating files with confusing names, Git tracks the full history of each file. You can always go back to any previous version.</p>
+<p><strong>2. Safe experimentation</strong>: Create a branch to try something new. If it works, merge it in. If not, delete the branch. Your main code stays safe.</p>
+<p><strong>3. Collaboration without chaos</strong>: Multiple people can work on the same project. Git handles merging changes and flags conflicts when edits overlap.</p>
+<p><strong>4. Reproducibility</strong>: A Git history shows exactly how analysis evolved. Combined with good commit messages, it serves as a lab notebook for code.</p>
+<hr>
+</section>
+<section id="git-101-core-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="git-101-core-concepts">Git 101: Core concepts</h2>
+<section id="repository-repo" class="level3">
+<h3 class="anchored" data-anchor-id="repository-repo">Repository (repo)</h3>
+<p>A folder tracked by Git. Contains your files plus a hidden <code>.git</code> folder that stores the version history.</p>
+</section>
+<section id="commit" class="level3">
+<h3 class="anchored" data-anchor-id="commit">Commit</h3>
+<p>A snapshot of your project at a point in time. Each commit has:</p>
+<ul>
+<li>a unique ID (hash)</li>
+<li>a message describing the change</li>
+<li>a timestamp and author</li>
+</ul>
+</section>
+<section id="branch" class="level3">
+<h3 class="anchored" data-anchor-id="branch">Branch</h3>
+<p>A parallel line of development. The default branch is usually called <code>main</code>. You can create branches to work on features without affecting <code>main</code>.</p>
+</section>
+<section id="remote" class="level3">
+<h3 class="anchored" data-anchor-id="remote">Remote</h3>
+<p>A copy of your repository hosted elsewhere (e.g., on GitHub). You push commits to the remote and pull updates from it.</p>
+<hr>
+</section>
+</section>
+<section id="basic-git-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="basic-git-workflow">Basic Git workflow</h2>
+<p>The typical daily workflow:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Check what's changed</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Stage files you want to commit</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add filename.R</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .                <span class="co"># stages all changes</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Commit with a message</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add thermal comfort analysis"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Push to GitHub</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="essential-commands" class="level2">
+<h2 class="anchored" data-anchor-id="essential-commands">Essential commands</h2>
+<section id="setup-and-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="setup-and-configuration">Setup and configuration</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set your identity (once per machine)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone an existing repository</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/user/repo.git</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a new repository</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="daily-use" class="level3">
+<h3 class="anchored" data-anchor-id="daily-use">Daily use</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check status of working directory</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># View commit history</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span>        <span class="co"># compact view</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Stage changes</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>file<span class="op">&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Commit staged changes</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Descriptive message"</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Push commits to remote</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull latest changes from remote</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="branching" class="level3">
+<h3 class="anchored" data-anchor-id="branching">Branching</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List branches</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create and switch to new branch</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> feature-name</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Switch to existing branch</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge branch into current branch</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge feature-name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="undoing-things" class="level3">
+<h3 class="anchored" data-anchor-id="undoing-things">Undoing things</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Discard changes in working directory</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--</span> <span class="op">&lt;</span>file<span class="op">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Unstage a file (keep changes)</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset HEAD <span class="op">&lt;</span>file<span class="op">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># View what changed</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--staged</span>        <span class="co"># staged changes only</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="writing-good-commit-messages" class="level2">
+<h2 class="anchored" data-anchor-id="writing-good-commit-messages">Writing good commit messages</h2>
+<p>Commit messages should explain <strong>why</strong>, not just what. Future you (and collaborators) will thank you.</p>
+<p><strong>Good:</strong></p>
+<pre><code>Fix temperature unit conversion in comfort model
+
+The original code assumed Fahrenheit input but data is in Celsius.
+This caused PMV calculations to be wildly off.</code></pre>
+<p><strong>Less useful:</strong></p>
+<pre><code>Fixed bug</code></pre>
+<p>Keep the first line under 50 characters. Add detail in the body if needed.</p>
+<hr>
+</section>
+<section id="recommended-workflow-for-research" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-workflow-for-research">Recommended workflow for research</h2>
+<ol type="1">
+<li><strong>One repo per project</strong> — keep data, code, and outputs together</li>
+<li><strong>Commit often</strong> — small, logical chunks are easier to understand</li>
+<li><strong>Use branches for experiments</strong> — keep <code>main</code> stable</li>
+<li><strong>Write meaningful messages</strong> — your future self will read them</li>
+<li><strong>Push regularly</strong> — backup your work and enable collaboration</li>
+</ol>
+<hr>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<section id="option-1-github-desktop" class="level4">
+<h4 class="anchored" data-anchor-id="option-1-github-desktop">Option 1: GitHub Desktop</h4>
+<p>A graphical interface for Git. Good for beginners or those who prefer visual tools.</p>
+<p>Download: <a href="https://desktop.github.com">desktop.github.com</a></p>
+</section>
+<section id="option-2-command-line" class="level4">
+<h4 class="anchored" data-anchor-id="option-2-command-line">Option 2: Command line</h4>
+<p>More powerful and portable. The commands above work on any system with Git installed. This is what we recommend.</p>
+<p>Download Git: <a href="https://git-scm.com">git-scm.com</a></p>
+</section>
+<section id="option-3-ide-integration" class="level4">
+<h4 class="anchored" data-anchor-id="option-3-ide-integration">Option 3: IDE integration</h4>
+<p>RStudio, VS Code, and most editors have built-in Git support. Look for the “Git” or “Source Control” panel.</p>
+<hr>
+</section>
+</section>
+<section id="further-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-resources">Further resources</h2>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2">Pro Git book</a> — comprehensive and free</li>
+<li><a href="https://docs.github.com">GitHub Docs</a> — official GitHub documentation</li>
+<li><a href="https://ohshitgit.com">Oh Shit, Git!?!</a> — how to fix common mistakes</li>
+</ul>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,230 @@
+---
+title: "Using Git"
+---
+
+**Quick link:** [Essential commands](#essential-commands)
+
+---
+
+
+This section introduces **Git** and **GitHub** for researchers who want to track changes, collaborate, and maintain reproducible workflows.
+
+Version control is essential for any code-based research project. It allows you to:
+
+- track every change to your files over time
+- revert to previous versions when something breaks
+- collaborate without overwriting each other's work
+- maintain a clear history of how analysis evolved
+
+---
+
+## What is Git?
+
+**Git** is a version control system that runs on your computer. It tracks changes to files in a project folder (called a repository). Every time you save a snapshot (called a commit), Git records what changed, when, and who made the change.
+
+Git works locally—you don't need an internet connection to use it.
+
+---
+
+## What is GitHub?
+
+**GitHub** is a web platform that hosts Git repositories online. It adds:
+
+- cloud backup for your code
+- collaboration features (pull requests, issues, code review)
+- visibility for sharing work publicly or with collaborators
+
+Other alternatives exist (GitLab, Bitbucket), but GitHub is the most common in research contexts.
+
+**Key distinction:** Git is the tool. GitHub is a service that uses Git.
+
+---
+
+## Why use version control?
+
+**1. No more "final_v2_REAL_final.R"**: Instead of duplicating files with confusing names, Git tracks the full history of each file. You can always go back to any previous version.
+
+
+**2. Safe experimentation**: Create a branch to try something new. If it works, merge it in. If not, delete the branch. Your main code stays safe.
+
+
+**3. Collaboration without chaos**: Multiple people can work on the same project. Git handles merging changes and flags conflicts when edits overlap.
+
+
+**4. Reproducibility**: A Git history shows exactly how analysis evolved. Combined with good commit messages, it serves as a lab notebook for code.
+
+---
+
+## Git 101: Core concepts
+
+### Repository (repo)
+
+A folder tracked by Git. Contains your files plus a hidden `.git` folder that stores the version history.
+
+### Commit
+
+A snapshot of your project at a point in time. Each commit has:
+
+- a unique ID (hash)
+- a message describing the change
+- a timestamp and author
+
+### Branch
+
+A parallel line of development. The default branch is usually called `main`. You can create branches to work on features without affecting `main`.
+
+### Remote
+
+A copy of your repository hosted elsewhere (e.g., on GitHub). You push commits to the remote and pull updates from it.
+
+---
+
+## Basic Git workflow
+
+The typical daily workflow:
+
+```bash
+# 1. Check what's changed
+git status
+
+# 2. Stage files you want to commit
+git add filename.R
+git add .                # stages all changes
+
+# 3. Commit with a message
+git commit -m "Add thermal comfort analysis"
+
+# 4. Push to GitHub
+git push
+```
+
+---
+
+## Essential commands
+
+### Setup and configuration
+
+```bash
+# Set your identity (once per machine)
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+# Clone an existing repository
+git clone https://github.com/user/repo.git
+
+# Initialize a new repository
+git init
+```
+
+### Daily use
+
+```bash
+# Check status of working directory
+git status
+
+# View commit history
+git log
+git log --oneline        # compact view
+
+# Stage changes
+git add <file>
+git add .
+
+# Commit staged changes
+git commit -m "Descriptive message"
+
+# Push commits to remote
+git push
+
+# Pull latest changes from remote
+git pull
+```
+
+### Branching
+
+```bash
+# List branches
+git branch
+
+# Create and switch to new branch
+git checkout -b feature-name
+
+# Switch to existing branch
+git checkout main
+
+# Merge branch into current branch
+git merge feature-name
+```
+
+### Undoing things
+
+```bash
+# Discard changes in working directory
+git checkout -- <file>
+
+# Unstage a file (keep changes)
+git reset HEAD <file>
+
+# View what changed
+git diff
+git diff --staged        # staged changes only
+```
+
+---
+
+## Writing good commit messages
+
+Commit messages should explain **why**, not just what. Future you (and collaborators) will thank you.
+
+**Good:**
+```
+Fix temperature unit conversion in comfort model
+
+The original code assumed Fahrenheit input but data is in Celsius.
+This caused PMV calculations to be wildly off.
+```
+
+**Less useful:**
+```
+Fixed bug
+```
+
+Keep the first line under 50 characters. Add detail in the body if needed.
+
+---
+
+## Recommended workflow for research
+
+1. **One repo per project** — keep data, code, and outputs together
+2. **Commit often** — small, logical chunks are easier to understand
+3. **Use branches for experiments** — keep `main` stable
+4. **Write meaningful messages** — your future self will read them
+5. **Push regularly** — backup your work and enable collaboration
+
+---
+
+## Getting started
+
+#### Option 1: GitHub Desktop
+
+A graphical interface for Git. Good for beginners or those who prefer visual tools.
+
+Download: [desktop.github.com](https://desktop.github.com)
+
+#### Option 2: Command line
+
+More powerful and portable. The commands above work on any system with Git installed. This is what we recommend.
+
+Download Git: [git-scm.com](https://git-scm.com)
+
+#### Option 3: IDE integration
+
+RStudio, VS Code, and most editors have built-in Git support. Look for the "Git" or "Source Control" panel.
+
+---
+
+## Further resources
+
+- [Pro Git book](https://git-scm.com/book/en/v2) — comprehensive and free
+- [GitHub Docs](https://docs.github.com) — official GitHub documentation
+- [Oh Shit, Git!?!](https://ohshitgit.com) — how to fix common mistakes

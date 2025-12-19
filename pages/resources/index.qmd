@@ -119,6 +119,9 @@ Core Python plotting ecosystem:
 - **Jupyter Notebook documentation**  
   [https://jupyter.org/documentation](https://jupyter.org/documentation)
 
+- **Start using GitHub**
+  [https://docs.github.com/en/get-started](https://docs.github.com/en/get-started)
+
 ---
 
 ### Color and accessibility
