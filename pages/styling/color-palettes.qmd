@@ -130,7 +130,7 @@ thermal_preference_palette <- c("#82c6ed","#c9e0b0","#eb6b58")
 
 thermal_acceptability_levels <- c("-2", "-1", "0", "+1", "+2")
 thermal_acceptability_labels <- c("Very unacceptable", "Somewhat unacceptable", "Neither nor", "Somewhat acceptable", "Very acceptable")
-thermal_acceptability_palette <- c('#bc3e4d','#d99fa8','#f3e8e7','#c1e0b9','#38a257')
+thermal_acceptability_palette <- c('#bc3e4d','#d99fa8',''#f0f0f0','#c1e0b9','#38a257')
 
 df <- data.frame(
   level = factor(thermal_acceptability_levels, levels = thermal_acceptability_levels),
@@ -149,6 +149,6 @@ palette_strip_plot(df)
 
 thermal_acceptability_levels <- c("-2", "-1", "0", "+1", "+2")
 thermal_acceptability_labels <- c("Very unacceptable", "Somewhat unacceptable", "Neither nor", "Somewhat acceptable", "Very acceptable")
-thermal_acceptability_palette <- c('#bc3e4d','#d99fa8','#f3e8e7','#c1e0b9','#38a257')
+thermal_acceptability_palette <- c('#bc3e4d','#d99fa8',''#f0f0f0'','#c1e0b9','#38a257')
 
 ```
