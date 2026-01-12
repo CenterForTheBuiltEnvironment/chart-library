@@ -22,7 +22,7 @@ Below you can find some examples for typical color palettes used in our research
 
 satisfaction_levels <- c("-3", "-2", "-1", "0", "+1", "+2", "+3")
 satisfaction_labels <- c("Very\nDissatisfied", "Dissatisfied", "Somewhat\nDissatisfied", "Neither",  "Somewhat\nSatisfied", "Satisfied", "Very\nSatisfied")
-satisfaction_palette <- c("#ba3b50", "#cf6b61", "#d09da9", '#f3e8e7', "#c2e8bb", "#8bcc8a", "#4cb15e")
+satisfaction_palette <- c("#ba3b50", "#cf6b61", "#d09da9", '#f0f0f0', "#c2e8bb", "#8bcc8a", "#4cb15e")
 
 df <- data.frame(
   level = factor(satisfaction_levels, levels = satisfaction_levels),
