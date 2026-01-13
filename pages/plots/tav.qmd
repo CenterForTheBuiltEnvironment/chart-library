@@ -2,7 +2,7 @@
 title: "Thermal acceptability"
 description: "Distribution of thermal acceptability votes, e.g from survey data."
 categories: ["Survey data", "R"]
-code-r: "https://github.com/t-kramer/plot-library/blob/main/src/R/plots/tav.R"
+code-r: "https://github.com/CenterForTheBuiltEnvironment/chart-library/blob/main/src/R/plots/tav.R"
 code-python: None
 code-contributor: "T. Kramer"
 ---
