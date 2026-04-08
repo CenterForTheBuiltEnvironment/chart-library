@@ -105,132 +105,6 @@
     "text": "Occupant satisfaction and thermal preference\n\n\nPlot comparing thermal satisfaction and thermal preference at different conditions.\n\n\n\n\n\n\n\n\n\n\nOccupant satisfaction with IEQ parameters\n\n\nStandard CBE plot to visualize satisfaction with IEQ parameters.\n\n\n\n\n\n\n\n\n\n\nOccupant satisfaction with building by category\n\n\nPlot comparing thermal satisfaction in different building categories.\n\n\n\n\n\n\n\n\n\n\nTemporal autonomy for IEQ parameters\n\n\nHourly autonomy map and annual summary for luminous autonomy, thermal autonomy, and ventilation autonomy.\n\n\n\n\n\n\n\n\n\n\nThermal acceptability\n\n\nDistribution of thermal acceptability votes, e.g from survey data.\n\n\n\n\n\n\n\n\n\n\nThermal preference\n\n\nDistribution of thermal preference votes, e.g from survey data.\n\n\n\n\n\n\n\n\n\n\nThermal sensation\n\n\nDistribution of thermal sensation votes, e.g from survey data.\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "pages/code/ai.html",
-    "href": "pages/code/ai.html",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "",
-    "text": "This page provides guidance on how to use AI tools (such as ChatGPT and coding assistants) responsibly and effectively when developing figures, analyzing data, and writing code.\nAI is treated here as a support tool, not a replacement for scientific judgment or statistical reasoning."
-  },
-  {
-    "objectID": "pages/code/ai.html#what-ai-is-good-at",
-    "href": "pages/code/ai.html#what-ai-is-good-at",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "What AI is good at",
-    "text": "What AI is good at\nAI tools are particularly useful for:\n\nCode assistance\n\ngenerating boilerplate Python/R code\nexplaining unfamiliar functions or syntax\nconverting logic between languages (e.g., R ↔︎ Python)\nwriting helper functions\ndebugging simple errors\n\n\n\nVisualization prototyping\n\ngenerating first drafts of plots\nsuggesting plot types for a dataset\ntranslating conceptual ideas into code\nexploring alternative encodings (e.g., color vs shape vs faceting)\n\n\n\nDocumentation and writing\n\ndrafting README files or documentation pages\nimproving clarity of plot explanations\nsummarizing code behavior\ngenerating examples and templates"
-  },
-  {
-    "objectID": "pages/code/ai.html#what-ai-is-not-good-at",
-    "href": "pages/code/ai.html#what-ai-is-not-good-at",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "What AI is not good at",
-    "text": "What AI is not good at\nAI should not be trusted blindly for:\n\nStatistical correctness\n\nmodel selection\ninterpreting results\nvalidating assumptions\nerror analysis\n\nAlways verify statistical reasoning independently.\n\n\nScientific interpretation\nAI does not understand your domain.\nIt cannot judge whether a result is scientifically meaningful.\n\n\nData privacy and ethics\nDo not upload:\n\nconfidential data\npersonally identifiable information\nunpublished results\nsensitive datasets\n\nWhen in doubt, assume the data should not be shared."
-  },
-  {
-    "objectID": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
-    "href": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "Good workflow: how to integrate AI into plotting",
-    "text": "Good workflow: how to integrate AI into plotting\nA recommended workflow:\n\nYou define the question.\nYou clean and structure the data.\nYou ask AI for plotting ideas or code templates.\nYou review and adapt the code.\nYou validate the output visually and statistically.\nYou refine styling and labeling manually.\nYou document the final reasoning in your own words.\n\nAI is a drafting assistant, not an author."
-  },
-  {
-    "objectID": "pages/code/ai.html#asking-better-questions",
-    "href": "pages/code/ai.html#asking-better-questions",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "Asking better questions",
-    "text": "Asking better questions\nAI works best when you provide:\n\na small reproducible example\na clear description of the outcome you want\ncontext about your dataset\nconstraints (e.g., publication quality, grayscale safe, accessible colors)\n\nExample:\n\n“I have a dataframe with time, temperature, and TSV.\nI want a plot that shows trend and uncertainty bands, in a style suitable for a journal paper.\nI am using Python/matplotlib.”\n\nPoor prompts are vague; good prompts are specific."
-  },
-  {
-    "objectID": "pages/code/ai.html#validation-checklist",
-    "href": "pages/code/ai.html#validation-checklist",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "Validation checklist",
-    "text": "Validation checklist\nBefore trusting AI-generated code or plots:\n\nDoes the chart type match my data?\nAre axes correctly labeled and scaled?\nAre units correct?\nAre categories ordered meaningfully?\nAre colors accessible?\nDoes the code reproduce the same figure on rerun?\nDo I understand what every major line of code does?\n\nIf the answer is “no” to any of these, treat the output as a draft, not final work."
-  },
-  {
-    "objectID": "pages/code/ai.html#transparency-and-acknowledgment",
-    "href": "pages/code/ai.html#transparency-and-acknowledgment",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "Transparency and acknowledgment",
-    "text": "Transparency and acknowledgment\nIf AI tools made a substantial contribution to:\n\ncode generation\nwriting\nfigure design\n\nconsider:\n\ndocumenting this in internal project notes\nacknowledging AI assistance when appropriate (e.g., teaching material, tutorials)\n\nDo not list AI as an author of scientific work."
-  },
-  {
-    "objectID": "pages/code/ai.html#how-this-page-will-evolve",
-    "href": "pages/code/ai.html#how-this-page-will-evolve",
-    "title": "Using AI in Plotting and Analysis",
-    "section": "How this page will evolve",
-    "text": "How this page will evolve\nOver time, this page may include:\n\nexamples of good prompts\ncase studies\nAI-assisted figure walkthroughs\nlab policies on AI use\nreproducibility guidelines\n\nTreat AI as a powerful tool that improves productivity — not as a substitute for expertise."
-  },
-  {
-    "objectID": "pages/styling/index.html",
-    "href": "pages/styling/index.html",
-    "title": "Styling Guidelines",
-    "section": "",
-    "text": "Styling Guidelines\nInternally, we define default visual standards for plots and figures. The main goals are:\n\nclarity – figures should be easy to interpret\nconsistency – plots should look coherent across projects\nreproducibility – formatting choices should be deliberate and documented\npublication-readiness – figures should scale cleanly from reports to journal submissions\n\nThese recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.\n\n\nGeneral plotting guidelines\n\nUse a sans-serif font type.  Fonts like Arial or Helvetica are easier to read and are usually the font of choice for labels and annotations.\nUse standard journal column widths.  When preparing figures for scientific publications using standard widths (e.g. single or double column) is critical to make decisions on font size and aspect ratio.\n\nSingle-column: 89 mm\nTwo-column: 183 mm\n\nUse an appropriate font size.  Everything smaller than 7pt this is usually too small for axis labels, tick labels, and legend text.\nUse a neutral background.  Usually a white or transparent background is best when exporting PNGs (e.g., for slides).\nAvoid using borders and frames.  Unless they are needed for clarity.\nUse 4–6 tick labels or less.  More ticks reduce clarity and add unnecessary detail.\nUse detailed captions.  The figure and caption should be understandable without referring back to the main text.\n\n\n\n\n\n\n\nImportantThings to avoid\n\n\n\n\nAvoid pie charts.\nBar charts usually communicate the same information more clearly and comparably.\nAvoid 3D charts.\nWhen rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.\nAvoid gridlines by default.\nGridlines were historically used to assist manual interpretation.\nIn modern workflows, it is better to:\n\nshare the underlying dataset, and\n\nadd gridlines only if they improve interpretability."
-  },
-  {
-    "objectID": "pages/styling/color-palettes.html",
-    "href": "pages/styling/color-palettes.html",
-    "title": "CBE Chart Library",
-    "section": "",
-    "text": "Below you can find some examples for typical color palettes used in our research publications. If you are looking for something more general, it is worth checking out ColorBrewer.\n\nOccupant satisfaction\n\n\n\n\n\n\n\n\n\n\n\nCode\nsatisfaction_levels &lt;- c(\"-3\", \"-2\", \"-1\", \"0\", \"+1\", \"+2\", \"+3\")\nsatisfaction_labels &lt;- c(\"Very\\nDissatisfied\", \"Dissatisfied\", \"Somewhat\\nDissatisfied\", \"Neither\",  \"Somewhat\\nSatisfied\", \"Satisfied\", \"Very\\nSatisfied\")\nsatisfaction_palette &lt;- c(\"#ba3b50\", \"#cf6b61\", \"#d09da9\", '#f3e8e7', \"#c2e8bb\", \"#8bcc8a\", \"#4cb15e\")\n\n\n\n\n\nThermal sensation\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_sensation_levels &lt;- c(\"-3\", \"-2\", \"-1\", \"0\", \"+1\", \"+2\", \"+3\")\nthermal_sensation_labels &lt;- c(\"Cold\", \"Cool\", \"Slightly cool\", \"Neutral\", \"Slightly warm\", \"Warm\", \"Hot\")\nthermal_sensation_palette &lt;- c(\"#6b8dd6\",\"#82c6ed\",\"#b8e4f7\",\"#c9e0b0\",\"#f7a9b7\",\"#eb6b58\",\"#b44a4a\")\n\n\n\n\n\nThermal preference\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_preference_levels &lt;- c(\"-1\", \"0\", \"+1\")\nthermal_preference_labels &lt;- c(\"Cooler\", \"No change\", \"Warmer\")\nthermal_preference_palette &lt;- c(\"#82c6ed\",\"#c9e0b0\",\"#eb6b58\")\n\n\n\n\n\nThermal acceptability\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_acceptability_levels &lt;- c(\"-2\", \"-1\", \"0\", \"+1\", \"+2\")\nthermal_acceptability_labels &lt;- c(\"Very unacceptable\", \"Somewhat unacceptable\", \"Neither nor\", \"Somewhat acceptable\", \"Very acceptable\")\nthermal_acceptability_palette &lt;- c('#bc3e4d','#d99fa8','#f0f0f0','#c1e0b9','#38a257')"
-  },
-  {
-    "objectID": "pages/plots/tav.html",
-    "href": "pages/plots/tav.html",
-    "title": "Thermal acceptability",
-    "section": "",
-    "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_acceptability_d &lt;- stacked_pct_data(survey, thermal_acceptability)\n\nplot_stacked_pct(survey, thermal_acceptability, acceptability_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
-  },
-  {
-    "objectID": "pages/plots/kent-001.html",
-    "href": "pages/plots/kent-001.html",
-    "title": "Occupant satisfaction and thermal preference",
-    "section": "",
-    "text": "Note\n\n\n\nSource: Kent et al. (2023)  DOI: https://doi.org/10.1016/j.buildenv.2023.110674"
-  },
-  {
-    "objectID": "pages/plots/tpv.html",
-    "href": "pages/plots/tpv.html",
-    "title": "Thermal preference",
-    "section": "",
-    "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_preference_d &lt;- stacked_pct_data(survey, thermal_preference)\n\nplot_stacked_pct(survey, thermal_preference, thermal_preference_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
-  },
-  {
-    "objectID": "CLAUDE.html",
-    "href": "CLAUDE.html",
-    "title": "CLAUDE.md",
-    "section": "",
-    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is the CBE Chart Library, a Quarto-based website that serves as a gallery and reference for data visualization in building science and indoor environmental quality research. The site is maintained by UC Berkeley’s Center for the Built Environment (CBE).\n\n\n\n# Preview the site locally\nquarto preview\n\n# Build the site (outputs to docs/)\nquarto render\n\n# Render a single page\nquarto render pages/plots/tav.qmd\n\n\n\nThe project uses renv for R package management. R version 4.4.1.\n# Restore R packages\nR -e \"renv::restore()\"\n\n\n\n\n\n\npages/plots/ - Individual plot gallery entries (.qmd files that reference R scripts)\npages/styling/ - Style guidelines, color palettes, font recommendations\npages/code/ - Tutorials for R, Python, Git, AI tools\nsrc/R/ - Reusable R source code\n\nx_data.R - Sample data generation and factor level definitions\nx_func.R - Plotting helper functions (e.g., plot_stacked_pct, palette_strip_plot)\nx_theme.R - Color palette definitions\nplots/ - Individual plot scripts sourced by gallery pages\n\ndocs/ - Generated site output (committed for GitHub Pages)\nstyles/custom.css - Site-wide CSS customizations\n\n\n\n\nEach plot in the gallery is a .qmd file in pages/plots/ that: 1. Defines metadata (title, description, categories, contributor) 2. Sources an R script from src/R/plots/ using #| file: directive 3. The R script sources shared helpers from src/R/x_*.R files\nExample pattern in pages/plots/tav.qmd:\n#| file: \"../../src/R/plots/tav.R\"\n\n\n\nStandard palettes are defined in src/R/x_theme.R: - thermal_sensation_palette - 7-point cold-to-hot scale - thermal_preference_palette - 3-point cooler/no change/warmer scale - acceptability_palette - 5-point unacceptable-to-acceptable scale\n\n\n\nFrom pages/styling/index.qmd: - Sans-serif fonts (Arial, Helvetica) - Minimum 7pt font size for labels - Standard journal widths: single-column 89mm, two-column 183mm - White/transparent backgrounds - Avoid pie charts, 3D charts, and gridlines by default"
-  },
-  {
-    "objectID": "CLAUDE.html#project-overview",
-    "href": "CLAUDE.html#project-overview",
-    "title": "CLAUDE.md",
-    "section": "",
-    "text": "This is the CBE Chart Library, a Quarto-based website that serves as a gallery and reference for data visualization in building science and indoor environmental quality research. The site is maintained by UC Berkeley’s Center for the Built Environment (CBE)."
-  },
-  {
-    "objectID": "CLAUDE.html#build-commands",
-    "href": "CLAUDE.html#build-commands",
-    "title": "CLAUDE.md",
-    "section": "",
-    "text": "# Preview the site locally\nquarto preview\n\n# Build the site (outputs to docs/)\nquarto render\n\n# Render a single page\nquarto render pages/plots/tav.qmd"
-  },
-  {
-    "objectID": "CLAUDE.html#r-environment",
-    "href": "CLAUDE.html#r-environment",
-    "title": "CLAUDE.md",
-    "section": "",
-    "text": "The project uses renv for R package management. R version 4.4.1.\n# Restore R packages\nR -e \"renv::restore()\""
-  },
-  {
-    "objectID": "CLAUDE.html#architecture",
-    "href": "CLAUDE.html#architecture",
-    "title": "CLAUDE.md",
-    "section": "",
-    "text": "pages/plots/ - Individual plot gallery entries (.qmd files that reference R scripts)\npages/styling/ - Style guidelines, color palettes, font recommendations\npages/code/ - Tutorials for R, Python, Git, AI tools\nsrc/R/ - Reusable R source code\n\nx_data.R - Sample data generation and factor level definitions\nx_func.R - Plotting helper functions (e.g., plot_stacked_pct, palette_strip_plot)\nx_theme.R - Color palette definitions\nplots/ - Individual plot scripts sourced by gallery pages\n\ndocs/ - Generated site output (committed for GitHub Pages)\nstyles/custom.css - Site-wide CSS customizations\n\n\n\n\nEach plot in the gallery is a .qmd file in pages/plots/ that: 1. Defines metadata (title, description, categories, contributor) 2. Sources an R script from src/R/plots/ using #| file: directive 3. The R script sources shared helpers from src/R/x_*.R files\nExample pattern in pages/plots/tav.qmd:\n#| file: \"../../src/R/plots/tav.R\"\n\n\n\nStandard palettes are defined in src/R/x_theme.R: - thermal_sensation_palette - 7-point cold-to-hot scale - thermal_preference_palette - 3-point cooler/no change/warmer scale - acceptability_palette - 5-point unacceptable-to-acceptable scale\n\n\n\nFrom pages/styling/index.qmd: - Sans-serif fonts (Arial, Helvetica) - Minimum 7pt font size for labels - Standard journal widths: single-column 89mm, two-column 183mm - White/transparent backgrounds - Avoid pie charts, 3D charts, and gridlines by default"
-  },
-  {
     "objectID": "pages/code/git.html",
     "href": "pages/code/git.html",
     "title": "Using Git",
@@ -306,5 +180,96 @@
     "title": "Using Git",
     "section": "Further resources",
     "text": "Further resources\n\nPro Git book — comprehensive and free\nGitHub Docs — official GitHub documentation\nOh Shit, Git!?! — how to fix common mistakes"
+  },
+  {
+    "objectID": "pages/code/ai.html",
+    "href": "pages/code/ai.html",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "",
+    "text": "This page provides guidance on how to use AI tools (such as ChatGPT and coding assistants) responsibly and effectively when developing figures, analyzing data, and writing code.\nAI is treated here as a support tool, not a replacement for scientific judgment or statistical reasoning."
+  },
+  {
+    "objectID": "pages/code/ai.html#what-ai-is-good-at",
+    "href": "pages/code/ai.html#what-ai-is-good-at",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "What AI is good at",
+    "text": "What AI is good at\nAI tools are particularly useful for:\n\nCode assistance\n\ngenerating boilerplate Python/R code\nexplaining unfamiliar functions or syntax\nconverting logic between languages (e.g., R ↔︎ Python)\nwriting helper functions\ndebugging simple errors\n\n\n\nVisualization prototyping\n\ngenerating first drafts of plots\nsuggesting plot types for a dataset\ntranslating conceptual ideas into code\nexploring alternative encodings (e.g., color vs shape vs faceting)\n\n\n\nDocumentation and writing\n\ndrafting README files or documentation pages\nimproving clarity of plot explanations\nsummarizing code behavior\ngenerating examples and templates"
+  },
+  {
+    "objectID": "pages/code/ai.html#what-ai-is-not-good-at",
+    "href": "pages/code/ai.html#what-ai-is-not-good-at",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "What AI is not good at",
+    "text": "What AI is not good at\nAI should not be trusted blindly for:\n\nStatistical correctness\n\nmodel selection\ninterpreting results\nvalidating assumptions\nerror analysis\n\nAlways verify statistical reasoning independently.\n\n\nScientific interpretation\nAI does not understand your domain.\nIt cannot judge whether a result is scientifically meaningful.\n\n\nData privacy and ethics\nDo not upload:\n\nconfidential data\npersonally identifiable information\nunpublished results\nsensitive datasets\n\nWhen in doubt, assume the data should not be shared."
+  },
+  {
+    "objectID": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
+    "href": "pages/code/ai.html#good-workflow-how-to-integrate-ai-into-plotting",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Good workflow: how to integrate AI into plotting",
+    "text": "Good workflow: how to integrate AI into plotting\nA recommended workflow:\n\nYou define the question.\nYou clean and structure the data.\nYou ask AI for plotting ideas or code templates.\nYou review and adapt the code.\nYou validate the output visually and statistically.\nYou refine styling and labeling manually.\nYou document the final reasoning in your own words.\n\nAI is a drafting assistant, not an author."
+  },
+  {
+    "objectID": "pages/code/ai.html#asking-better-questions",
+    "href": "pages/code/ai.html#asking-better-questions",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Asking better questions",
+    "text": "Asking better questions\nAI works best when you provide:\n\na small reproducible example\na clear description of the outcome you want\ncontext about your dataset\nconstraints (e.g., publication quality, grayscale safe, accessible colors)\n\nExample:\n\n“I have a dataframe with time, temperature, and TSV.\nI want a plot that shows trend and uncertainty bands, in a style suitable for a journal paper.\nI am using Python/matplotlib.”\n\nPoor prompts are vague; good prompts are specific."
+  },
+  {
+    "objectID": "pages/code/ai.html#validation-checklist",
+    "href": "pages/code/ai.html#validation-checklist",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Validation checklist",
+    "text": "Validation checklist\nBefore trusting AI-generated code or plots:\n\nDoes the chart type match my data?\nAre axes correctly labeled and scaled?\nAre units correct?\nAre categories ordered meaningfully?\nAre colors accessible?\nDoes the code reproduce the same figure on rerun?\nDo I understand what every major line of code does?\n\nIf the answer is “no” to any of these, treat the output as a draft, not final work."
+  },
+  {
+    "objectID": "pages/code/ai.html#transparency-and-acknowledgment",
+    "href": "pages/code/ai.html#transparency-and-acknowledgment",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "Transparency and acknowledgment",
+    "text": "Transparency and acknowledgment\nIf AI tools made a substantial contribution to:\n\ncode generation\nwriting\nfigure design\n\nconsider:\n\ndocumenting this in internal project notes\nacknowledging AI assistance when appropriate (e.g., teaching material, tutorials)\n\nDo not list AI as an author of scientific work."
+  },
+  {
+    "objectID": "pages/code/ai.html#how-this-page-will-evolve",
+    "href": "pages/code/ai.html#how-this-page-will-evolve",
+    "title": "Using AI in Plotting and Analysis",
+    "section": "How this page will evolve",
+    "text": "How this page will evolve\nOver time, this page may include:\n\nexamples of good prompts\ncase studies\nAI-assisted figure walkthroughs\nlab policies on AI use\nreproducibility guidelines\n\nTreat AI as a powerful tool that improves productivity — not as a substitute for expertise."
+  },
+  {
+    "objectID": "pages/styling/index.html",
+    "href": "pages/styling/index.html",
+    "title": "Styling Guidelines",
+    "section": "",
+    "text": "Styling Guidelines\nInternally, we define default visual standards for plots and figures. The main goals are:\n\nclarity – figures should be easy to interpret\nconsistency – plots should look coherent across projects\nreproducibility – formatting choices should be deliberate and documented\npublication-readiness – figures should scale cleanly from reports to journal submissions\n\nThese recommendations aim to encourage good habits in everyday work and to reduce last-minute figure reformatting when preparing publications.\n\n\nGeneral plotting guidelines\n\nUse a sans-serif font type.  Fonts like Arial or Helvetica are easier to read and are usually the font of choice for labels and annotations.\nUse standard journal column widths.  When preparing figures for scientific publications using standard widths (e.g. single or double column) is critical to make decisions on font size and aspect ratio.\n\nSingle-column: 89 mm\nTwo-column: 183 mm\n\nUse an appropriate font size.  Everything smaller than 7pt this is usually too small for axis labels, tick labels, and legend text.\nUse a neutral background.  Usually a white or transparent background is best when exporting PNGs (e.g., for slides).\nAvoid using borders and frames.  Unless they are needed for clarity.\nUse 4–6 tick labels or less.  More ticks reduce clarity and add unnecessary detail.\nUse detailed captions.  The figure and caption should be understandable without referring back to the main text.\n\n\n\n\n\n\n\nImportantThings to avoid\n\n\n\n\nAvoid pie charts.\nBar charts usually communicate the same information more clearly and comparably.\nAvoid 3D charts.\nWhen rendered in 2D (e.g., in papers or slides), 3D visualizations are hard to read and can introduce ambiguity.\nAvoid gridlines by default.\nGridlines were historically used to assist manual interpretation.\nIn modern workflows, it is better to:\n\nshare the underlying dataset, and\n\nadd gridlines only if they improve interpretability."
+  },
+  {
+    "objectID": "pages/styling/color-palettes.html",
+    "href": "pages/styling/color-palettes.html",
+    "title": "CBE Chart Library",
+    "section": "",
+    "text": "Below you can find some examples for typical color palettes used in our research publications. If you are looking for something more general, it is worth checking out ColorBrewer.\n\nOccupant satisfaction\n\n\n\n\n\n\n\n\n\n\n\nCode\nsatisfaction_levels &lt;- c(\"-3\", \"-2\", \"-1\", \"0\", \"+1\", \"+2\", \"+3\")\nsatisfaction_labels &lt;- c(\"Very\\nDissatisfied\", \"Dissatisfied\", \"Somewhat\\nDissatisfied\", \"Neither\",  \"Somewhat\\nSatisfied\", \"Satisfied\", \"Very\\nSatisfied\")\nsatisfaction_palette &lt;- c(\"#ba3b50\", \"#cf6b61\", \"#d09da9\", '#f3e8e7', \"#c2e8bb\", \"#8bcc8a\", \"#4cb15e\")\n\n\n\n\n\nThermal sensation\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_sensation_levels &lt;- c(\"-3\", \"-2\", \"-1\", \"0\", \"+1\", \"+2\", \"+3\")\nthermal_sensation_labels &lt;- c(\"Cold\", \"Cool\", \"Slightly cool\", \"Neutral\", \"Slightly warm\", \"Warm\", \"Hot\")\nthermal_sensation_palette &lt;- c(\"#6b8dd6\",\"#82c6ed\",\"#b8e4f7\",\"#c9e0b0\",\"#f7a9b7\",\"#eb6b58\",\"#b44a4a\")\n\n\n\n\n\nThermal preference\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_preference_levels &lt;- c(\"-1\", \"0\", \"+1\")\nthermal_preference_labels &lt;- c(\"Warmer\", \"No change\",\"Cooler\")\nthermal_preference_palette &lt;- c(\"#82c6ed\",\"#c9e0b0\",\"#eb6b58\")\n\n\n\n\n\nThermal acceptability\n\n\n\n\n\n\n\n\n\n\n\nCode\nthermal_acceptability_levels &lt;- c(\"-2\", \"-1\", \"0\", \"+1\", \"+2\")\nthermal_acceptability_labels &lt;- c(\"Very unacceptable\", \"Somewhat unacceptable\", \"Neither nor\", \"Somewhat acceptable\", \"Very acceptable\")\nthermal_acceptability_palette &lt;- c('#bc3e4d','#d99fa8','#f0f0f0','#c1e0b9','#38a257')"
+  },
+  {
+    "objectID": "pages/plots/tav.html",
+    "href": "pages/plots/tav.html",
+    "title": "Thermal acceptability",
+    "section": "",
+    "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_acceptability_d &lt;- stacked_pct_data(survey, thermal_acceptability)\n\nplot_stacked_pct(survey, thermal_acceptability, acceptability_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
+  },
+  {
+    "objectID": "pages/plots/kent-001.html",
+    "href": "pages/plots/kent-001.html",
+    "title": "Occupant satisfaction and thermal preference",
+    "section": "",
+    "text": "Note\n\n\n\nSource: Kent et al. (2023)  DOI: https://doi.org/10.1016/j.buildenv.2023.110674"
+  },
+  {
+    "objectID": "pages/plots/tpv.html",
+    "href": "pages/plots/tpv.html",
+    "title": "Thermal preference",
+    "section": "",
+    "text": "Code\nsource(here::here(\"src\", \"R\", \"x_data.R\"))\nsource(here::here(\"src\", \"R\", \"x_func.R\"))\nsource(here::here(\"src\", \"R\", \"x_theme.R\"))\n\n# OPTIONAL: Generate dataframe for manuscript writing\nthermal_preference_d &lt;- stacked_pct_data(survey, thermal_preference)\n\nplot_stacked_pct(survey, thermal_preference, thermal_preference_palette)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCode: View R code on GitHub · Added by T. Kramer"
   }
 ]

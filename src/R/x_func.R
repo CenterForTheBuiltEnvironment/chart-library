@@ -22,7 +22,7 @@ plot_stacked_pct <- function(data, var, palette) {
     drop_na({{ var }})
   
   ggplot(df, aes(x = survey_id, fill = {{ var }})) +
-    geom_bar(position = "fill") +
+    geom_bar(position = position_fill(reverse = TRUE)) +
     scale_y_continuous(labels = percent, expand = expansion(mult = c(0, 0.01))) +
     scale_fill_manual(values = palette, labels = label_wrap_gen(width = 9)) +
     labs(y = "Percentage") +
@@ -41,6 +41,7 @@ plot_stacked_pct <- function(data, var, palette) {
     ) +
     guides(
       fill = guide_legend(
+        reverse = TRUE,
         ncol = 1,
         byrow = TRUE,
         label.position = "right",

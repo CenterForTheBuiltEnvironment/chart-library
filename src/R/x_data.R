@@ -7,7 +7,7 @@ thermal_sensation_levels <- c(
 )
 
 thermal_preference_levels <- c(
-  "Cooler", "No change", "Warmer"
+  "Warmer", "No change", "Cooler"
 )
 
 acceptability_levels <- c(
