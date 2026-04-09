@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -35,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -71,11 +107,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles/custom.css">
 <meta property="og:title" content="About – CBE Chart Library">
-<meta property="og:image" content="/../assets/img/cbe-favicon.png">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="CBE Chart Library">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -172,25 +208,146 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-this" id="toc-what-is-this" class="nav-link active" data-scroll-target="#what-is-this">What is this?</a></li>
+  <li><a href="#how-to-use-this-library" id="toc-how-to-use-this-library" class="nav-link" data-scroll-target="#how-to-use-this-library">How to use this library</a>
+  <ul class="collapse">
+  <li><a href="#browse-the-gallery" id="toc-browse-the-gallery" class="nav-link" data-scroll-target="#browse-the-gallery">Browse the Gallery</a></li>
+  <li><a href="#copy-and-adapt-the-code" id="toc-copy-and-adapt-the-code" class="nav-link" data-scroll-target="#copy-and-adapt-the-code">Copy and adapt the code</a></li>
+  <li><a href="#color-palettes" id="toc-color-palettes" class="nav-link" data-scroll-target="#color-palettes">Color palettes</a></li>
+  </ul></li>
+  <li><a href="#how-to-contribute" id="toc-how-to-contribute" class="nav-link" data-scroll-target="#how-to-contribute">How to contribute</a>
+  <ul class="collapse">
+  <li><a href="#prepare-your-code" id="toc-prepare-your-code" class="nav-link" data-scroll-target="#prepare-your-code">1. Prepare your code</a></li>
+  <li><a href="#create-a-gallery-page" id="toc-create-a-gallery-page" class="nav-link" data-scroll-target="#create-a-gallery-page">2. Create a gallery page</a></li>
+  <li><a href="#submit-a-pull-request" id="toc-submit-a-pull-request" class="nav-link" data-scroll-target="#submit-a-pull-request">3. Submit a pull request</a></li>
+  </ul></li>
+  <li><a href="#technical-details" id="toc-technical-details" class="nav-link" data-scroll-target="#technical-details">Technical details</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="/../assets/img/cbe-favicon.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">About</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
+  
 
 
-</main>  
-</div>
- <!-- /main -->
+</header>
+
+
+<section id="what-is-this" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-this">What is this?</h2>
+<p>The CBE Chart Library is a collection of reusable data visualizations for research in the built environment. It provides ready-to-use code templates for common plot types used in thermal comfort, indoor environmental quality (IEQ), and occupant satisfaction research.</p>
+</section>
+<section id="how-to-use-this-library" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-this-library">How to use this library</h2>
+<section id="browse-the-gallery" class="level3">
+<h3 class="anchored" data-anchor-id="browse-the-gallery">Browse the Gallery</h3>
+<p>The <a href="../index.html">Gallery</a> displays all available charts. You can filter by category (e.g., “Survey data”, “R”) to find relevant visualizations.</p>
+</section>
+<section id="copy-and-adapt-the-code" class="level3">
+<h3 class="anchored" data-anchor-id="copy-and-adapt-the-code">Copy and adapt the code</h3>
+<p>Each chart page includes:</p>
+<ol type="1">
+<li><strong>A preview</strong> of the visualization</li>
+<li><strong>Complete R code</strong> that you can expand and copy</li>
+<li><strong>Data requirements</strong> explaining the expected input format</li>
+<li><strong>Sample data</strong> demonstrating the required structure</li>
+</ol>
+<p>To use a chart in your own analysis:</p>
+<ol type="1">
+<li>Click on a chart in the Gallery</li>
+<li>Expand the code block by clicking “Code”</li>
+<li>Copy the code into your R script</li>
+<li>Replace the sample data with your own data (following the documented structure)</li>
+<li>Adjust labels, colors, and dimensions as needed</li>
+</ol>
+</section>
+<section id="color-palettes" class="level3">
+<h3 class="anchored" data-anchor-id="color-palettes">Color palettes</h3>
+<p>Visit the <a href="../pages/styling/color-palettes.html">Color Palettes</a> page for standardized color schemes used across CBE publications. Using consistent palettes helps maintain visual coherence across research outputs.</p>
+</section>
+</section>
+<section id="how-to-contribute" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-contribute">How to contribute</h2>
+<p>We welcome contributions from CBE researchers. Here’s how to add your own charts:</p>
+<section id="prepare-your-code" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-your-code">1. Prepare your code</h3>
+<p>Create a self-contained R script in <code>src/R/plots/</code> that includes:</p>
+<ul>
+<li>A header comment explaining the chart’s purpose</li>
+<li>Documentation of data requirements</li>
+<li>Sample data generation</li>
+<li>The complete plotting code</li>
+</ul>
+<p>See existing scripts (e.g., <code>tpv.R</code>, <code>tsv.R</code>) as templates.</p>
+</section>
+<section id="create-a-gallery-page" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-gallery-page">2. Create a gallery page</h3>
+<p>Add a new <code>.qmd</code> file in <code>pages/plots/</code> with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Chart Title"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Brief description of the chart."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"Category1"</span><span class="kw">,</span><span class="at"> </span><span class="st">"R"</span><span class="kw">]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">code-r</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/CenterForTheBuiltEnvironment/chart-library/blob/main/src/R/plots/your-script.R"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">code-contributor</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then include the code block referencing your script:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}, fig.width = 89/25.4, fig.height = 60/25.4</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| file: "../../src/R/plots/your-script.R"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="submit-a-pull-request" class="level3">
+<h3 class="anchored" data-anchor-id="submit-a-pull-request">3. Submit a pull request</h3>
+<p>Push your changes to a new branch and open a pull request on GitHub. Include a screenshot of your chart in the PR description.</p>
+</section>
+</section>
+<section id="technical-details" class="level2">
+<h2 class="anchored" data-anchor-id="technical-details">Technical details</h2>
+<ul>
+<li><strong>Framework</strong>: Built with <a href="https://quarto.org">Quarto</a></li>
+<li><strong>Hosting</strong>: GitHub Pages</li>
+<li><strong>Repository</strong>: <a href="https://github.com/CenterForTheBuiltEnvironment/chart-library">CenterForTheBuiltEnvironment/chart-library</a></li>
+</ul>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>For questions or suggestions, open an issue on <a href="https://github.com/CenterForTheBuiltEnvironment/chart-library/issues">GitHub</a> or contact the CBE research team.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

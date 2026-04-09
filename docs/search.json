@@ -28,6 +28,48 @@
     "text": "Note\n\n\n\nSource: Kent et al. (2024)  DOI: https://doi.org/10.1038/s41598-024-65768-w"
   },
   {
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "About",
+    "section": "",
+    "text": "The CBE Chart Library is a collection of reusable data visualizations for research in the built environment. It provides ready-to-use code templates for common plot types used in thermal comfort, indoor environmental quality (IEQ), and occupant satisfaction research."
+  },
+  {
+    "objectID": "pages/about.html#what-is-this",
+    "href": "pages/about.html#what-is-this",
+    "title": "About",
+    "section": "",
+    "text": "The CBE Chart Library is a collection of reusable data visualizations for research in the built environment. It provides ready-to-use code templates for common plot types used in thermal comfort, indoor environmental quality (IEQ), and occupant satisfaction research."
+  },
+  {
+    "objectID": "pages/about.html#how-to-use-this-library",
+    "href": "pages/about.html#how-to-use-this-library",
+    "title": "About",
+    "section": "How to use this library",
+    "text": "How to use this library\n\nBrowse the Gallery\nThe Gallery displays all available charts. You can filter by category (e.g., “Survey data”, “R”) to find relevant visualizations.\n\n\nCopy and adapt the code\nEach chart page includes:\n\nA preview of the visualization\nComplete R code that you can expand and copy\nData requirements explaining the expected input format\nSample data demonstrating the required structure\n\nTo use a chart in your own analysis:\n\nClick on a chart in the Gallery\nExpand the code block by clicking “Code”\nCopy the code into your R script\nReplace the sample data with your own data (following the documented structure)\nAdjust labels, colors, and dimensions as needed\n\n\n\nColor palettes\nVisit the Color Palettes page for standardized color schemes used across CBE publications. Using consistent palettes helps maintain visual coherence across research outputs."
+  },
+  {
+    "objectID": "pages/about.html#how-to-contribute",
+    "href": "pages/about.html#how-to-contribute",
+    "title": "About",
+    "section": "How to contribute",
+    "text": "How to contribute\nWe welcome contributions from CBE researchers. Here’s how to add your own charts:\n\n1. Prepare your code\nCreate a self-contained R script in src/R/plots/ that includes:\n\nA header comment explaining the chart’s purpose\nDocumentation of data requirements\nSample data generation\nThe complete plotting code\n\nSee existing scripts (e.g., tpv.R, tsv.R) as templates.\n\n\n2. Create a gallery page\nAdd a new .qmd file in pages/plots/ with:\n---\ntitle: \"Your Chart Title\"\ndescription: \"Brief description of the chart.\"\ncategories: [\"Category1\", \"R\"]\ncode-r: \"https://github.com/CenterForTheBuiltEnvironment/chart-library/blob/main/src/R/plots/your-script.R\"\ncode-contributor: \"Your Name\"\n---\nThen include the code block referencing your script:\n```{r}, fig.width = 89/25.4, fig.height = 60/25.4\n#| file: \"../../src/R/plots/your-script.R\"\n#| code-fold: true\n#| echo: true\n#| eval: true\n```\n\n\n3. Submit a pull request\nPush your changes to a new branch and open a pull request on GitHub. Include a screenshot of your chart in the PR description."
+  },
+  {
+    "objectID": "pages/about.html#technical-details",
+    "href": "pages/about.html#technical-details",
+    "title": "About",
+    "section": "Technical details",
+    "text": "Technical details\n\nFramework: Built with Quarto\nHosting: GitHub Pages\nRepository: CenterForTheBuiltEnvironment/chart-library"
+  },
+  {
+    "objectID": "pages/about.html#contact",
+    "href": "pages/about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\nFor questions or suggestions, open an issue on GitHub or contact the CBE research team."
+  },
+  {
     "objectID": "pages/code/r.html",
     "href": "pages/code/r.html",
     "title": "Plotting in R",

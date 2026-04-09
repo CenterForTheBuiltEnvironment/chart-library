@@ -1,8 +1,88 @@
 ---
 title: "About"
-title-block: true
-image: /../assets/img/cbe-favicon.png
-image-width: 200px
-about:
-  template: jolla
 ---
+
+## What is this?
+
+The CBE Chart Library is a collection of reusable data visualizations for research in the built environment. It provides ready-to-use code templates for common plot types used in thermal comfort, indoor environmental quality (IEQ), and occupant satisfaction research.
+
+## How to use this library
+
+### Browse the Gallery
+
+The [Gallery](../index.qmd) displays all available charts. You can filter by category (e.g., "Survey data", "R") to find relevant visualizations.
+
+### Copy and adapt the code
+
+Each chart page includes:
+
+1. **A preview** of the visualization
+2. **Complete R code** that you can expand and copy
+3. **Data requirements** explaining the expected input format
+4. **Sample data** demonstrating the required structure
+
+To use a chart in your own analysis:
+
+1. Click on a chart in the Gallery
+2. Expand the code block by clicking "Code"
+3. Copy the code into your R script
+4. Replace the sample data with your own data (following the documented structure)
+5. Adjust labels, colors, and dimensions as needed
+
+### Color palettes
+
+Visit the [Color Palettes](styling/color-palettes.qmd) page for standardized color schemes used across CBE publications. Using consistent palettes helps maintain visual coherence across research outputs.
+
+## How to contribute
+
+We welcome contributions from CBE researchers. Here's how to add your own charts:
+
+### 1. Prepare your code
+
+Create a self-contained R script in `src/R/plots/` that includes:
+
+- A header comment explaining the chart's purpose
+- Documentation of data requirements
+- Sample data generation
+- The complete plotting code
+
+See existing scripts (e.g., `tpv.R`, `tsv.R`) as templates.
+
+### 2. Create a gallery page
+
+Add a new `.qmd` file in `pages/plots/` with:
+
+```yaml
+---
+title: "Your Chart Title"
+description: "Brief description of the chart."
+categories: ["Category1", "R"]
+code-r: "https://github.com/CenterForTheBuiltEnvironment/chart-library/blob/main/src/R/plots/your-script.R"
+code-contributor: "Your Name"
+---
+```
+
+Then include the code block referencing your script:
+
+~~~
+```{{r}}, fig.width = 89/25.4, fig.height = 60/25.4
+#| file: "../../src/R/plots/your-script.R"
+#| code-fold: true
+#| echo: true
+#| eval: true
+```
+~~~
+
+### 3. Submit a pull request
+
+Push your changes to a new branch and open a pull request on GitHub. Include a screenshot of your chart in the PR description.
+
+## Technical details
+
+- **Framework**: Built with [Quarto](https://quarto.org)
+- **Hosting**: GitHub Pages
+- **Repository**: [CenterForTheBuiltEnvironment/chart-library](https://github.com/CenterForTheBuiltEnvironment/chart-library)
+
+## Contact
+
+For questions or suggestions, open an issue on [GitHub](https://github.com/CenterForTheBuiltEnvironment/chart-library/issues) or contact the CBE research team.
