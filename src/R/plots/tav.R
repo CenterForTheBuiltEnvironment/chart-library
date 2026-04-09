@@ -67,9 +67,9 @@ survey <- purrr::map_dfr(
 # ------------------------------------------------------------
 ggplot(survey %>% drop_na(thermal_acceptability),
        aes(x = survey_id, fill = thermal_acceptability)) +
-  geom_bar(position = position_fill(reverse = TRUE)) +
+  geom_bar(position = position_fill(reverse = TRUE), show.legend = TRUE) +
   scale_y_continuous(labels = percent, expand = expansion(mult = c(0, 0.01))) +
-  scale_fill_manual(values = acceptability_palette, labels = label_wrap_gen(width = 9)) +
+  scale_fill_manual(values = acceptability_palette, labels = label_wrap_gen(width = 9), drop = FALSE) +
   labs(y = "Percentage") +
   theme_minimal(base_size = 7) +
   theme(
