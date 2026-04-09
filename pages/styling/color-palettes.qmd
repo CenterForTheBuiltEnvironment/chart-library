@@ -1,4 +1,7 @@
-
+---
+title: "Color Palettes"
+description: "Standard color palettes for thermal comfort and satisfaction visualizations."
+---
 
 ```{r setup}
 #| echo: false

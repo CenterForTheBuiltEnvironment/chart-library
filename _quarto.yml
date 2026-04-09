@@ -43,7 +43,7 @@ website:
 
     right:
       - icon: github
-        href: https://centerforthebuiltenvironment.github.io/chart-library/
+        href: https://github.com/CenterForTheBuiltEnvironment/chart-library
         aria-label: GitHub repository
       - href: pages/about.qmd
 
@@ -58,7 +58,7 @@ website:
 
 format:
   html:
-    theme: quartz
+    theme: libera
     css: styles/custom.css
     toc: true
     grid:

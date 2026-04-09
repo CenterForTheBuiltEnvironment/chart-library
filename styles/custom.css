@@ -1,11 +1,58 @@
-/* Tweak body font size & max width */
+/* San Francisco system font stack */
 body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
+}
+
+/* Gradient background (subtle neutral) */
+body {
+  background: linear-gradient(135deg, #e8e4ef 0%, #f5f3f7 50%, #eef1f5 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Header/navbar styling */
+.navbar {
+  background-color: #002676 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar .dropdown-menu {
+  background-color: #002676;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar .dropdown-item {
+  color: #ffffff;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 /* Slightly widen content to give more room for code and plots */
 main.content {
   max-width: 900px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* Make code blocks a bit more compact */
@@ -14,21 +61,33 @@ main.content {
 }
 
 
+/* Semi-transparent cards (glassmorphism effect) */
+.quarto-listing .card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quarto-listing .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
 /* Plot Library card image padding */
 .quarto-listing .card-img-top {
   padding: 0.5rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Optional: give cards slightly rounded corners */
-.quarto-listing .card {
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-/* Optional: more breathing room inside cards */
+/* More breathing room inside cards */
 .quarto-listing .card-body {
   padding: 0.75rem 1rem;
+  background: transparent;
 }
 
 
@@ -67,7 +126,10 @@ main.content img {
 
 /* Folded / unfolded code blocks */
 div.sourceCode {
-  background-color: rgba(255, 255, 255, 0.8); /* white-ish, transparent */
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   padding: 0.75em;
 }
@@ -94,5 +156,5 @@ button.code-fold-toggle {
 
 /* Optional: callout body text */
 .callout > .callout-body {
-  color: #e5e7eb; /* slightly brighter than Quartz default */
+  color: #121213; /* slightly brighter than Quartz default */
 }
