@@ -1,0 +1,25 @@
+---
+title: "Thermal perception"
+description: "Combination of thermal sensation, thermal preference and thermal acceptability data into one figure."
+categories: ["Survey data", "R"]
+code-r: "https://github.com/CenterForTheBuiltEnvironment/chart-library/blob/main/src/R/plots/thermal-perception.R"
+code-python: None
+code-contributor: "T. Kramer"
+---
+
+```{r thermal-perception, fig.width = 89/25.4, fig.height = 170/25.4}
+#| file: "../../src/R/plots/thermal-perception.R"
+#| code-fold: true
+#| echo: true
+#| eval: true
+#| message: false
+#| warning: false
+#| out-width: 80%
+#| fig-align: center
+#| fig-dpi: 300
+```
+
+
+::: {.callout-note}
+**Code:** [View R code on GitHub]({{< meta code-r >}})  ·  Added by {{< meta code-contributor >}}
+:::

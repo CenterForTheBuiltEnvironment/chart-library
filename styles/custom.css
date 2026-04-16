@@ -93,7 +93,7 @@ main.content {
 
 /* Style all figures inside pages (but NOT listing cards) */
 main.content img {
-  max-height: 500px;
+  /* max-height: 1200px; */
   padding: 0.5rem;
   border-radius: 6px;
   background-color: #ffffff;
