@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "pages/**/*.qmd"
 
 bibliography: references.bib
 csl: apa.csl
