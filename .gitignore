@@ -15,6 +15,9 @@ _site/
 .Rhistory
 renv/
 
+# External files
+/resources
+
 
 # Claude Code
 CLAUDE.md
