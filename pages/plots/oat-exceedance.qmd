@@ -1,0 +1,24 @@
+---
+title: "Operative temperature exceedance curves"
+description: "Complementary cumulative distribution of operative temperature by zone, showing the percentage of occupied hours above or below comfort thresholds."
+categories: ["Timeseries data", "Simulation", "R"]
+code-r: "https://github.com/CenterForTheBuiltEnvironment/chart-library/blob/main/src/R/plots/oat-exceedance.R"
+code-python: None
+code-contributor: "C. Nambiar, T. Kramer"
+---
+
+```{r oat-exceedance, fig.width = 10, fig.height = 4.5}
+#| file: "../../src/R/plots/oat-exceedance.R"
+#| code-fold: true
+#| echo: true
+#| eval: true
+#| message: false
+#| warning: false
+#| out-width: 100%
+#| fig-align: center
+#| fig-dpi: 300
+```
+
+::: {.callout-note}
+**Code:** [View R code on GitHub]({{< meta code-r >}})  ·  Added by {{< meta code-contributor >}}
+:::
